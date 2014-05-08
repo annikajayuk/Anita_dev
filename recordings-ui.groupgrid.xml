@@ -21,12 +21,18 @@
             <filename />
         </imagetype>
         
+        <shape name="fanart_groupgrid_shade" depends="fanart&amp;!timedate">
+            <area>0,0,1920,1080</area>
+            <type>box</type>
+            <fill color="#000000" alpha="80" />
+        </shape>
+        
         <imagetype name="fanart_overlay" depends="fanart">
             <area>0,0,1920,1080</area>
             <filename>backdrops/anita-overlay.png</filename>
         </imagetype>
         
-        <shape name="detailsgroup_bg" depends="fanart">
+        <shape name="detailsgroup_bg" depends="fanart&amp;timedate">
             <area>0,60,1920,296</area>
             <area>0,44,1920,328</area>
             <fill style="gradient">
@@ -195,7 +201,7 @@
         </group>
         
         
-        <shape name="groups_bg">
+        <shape name="groups_bg" depends="timedate">
             <area>32,351,1856,60</area>
             <fill style="gradient">
                 <gradient direction="vertical" alpha="255">
@@ -212,8 +218,22 @@
             <alpha>255</alpha>
         </shape>
         
+        <shape name="groupgrid_bg" depends="!timedate">
+            <area>32,341,1856,679</area>
+            <fill style="gradient">
+                <gradient direction="vertical" alpha="255">
+                    <stop position="0" color="#001c53" alpha="0" />
+                    <stop position="5" color="#001c53" alpha="192" />
+                    <stop position="95" color="#001c53" alpha="160" />
+                    <stop position="100" color="#001c53" alpha="0" />
+                </gradient>
+            </fill>
+            <alpha>255</alpha>
+        </shape>
+        
         <buttonlist name="groups" from="basebuttonlist2">
-            <area>32,351,1856,60</area>
+            <area>30,351,1860,668</area>
+<!--             <area>32,60,1856,351</area> -->
 <!-- 
             <animation trigger="AboutToShow">
                 <section duration="500">
@@ -230,16 +250,19 @@
  -->
             <buttonarea>0,0,100%,100%</buttonarea>
             <spacing>0</spacing>
-            <wrapstyle>items</wrapstyle>
-            <scrollstyle>center</scrollstyle>
-            <layout>horizontal</layout>
+            <wrapstyle>flowing</wrapstyle>
+            <scrollstyle>free</scrollstyle>
+            <layout>grid</layout>
             <arrange>stack</arrange>
             <align>top,hcenter</align>
             <searchposition>-1,585</searchposition>
             <statetype name="buttonitem">
-                <state name="active" >
+                <state name="inactive" >
                     <area>0,0,242,60</area>
-                    <shape name="selectbar">
+                    <area>0,0,0,0</area>
+                    <shape name="spacer">
+                    </shape>
+                    <shape name="boxselectbar">
                         <area>0,0,100%,60</area>
                         <alpha>0</alpha>
                     </shape>
@@ -250,6 +273,8 @@
                         <align>allcenter</align>
                         <alpha>0</alpha>
                     </textarea>
+                    <shape name="namebg">
+                    </shape>
                     <textarea name="name">
                         <area>8,0,100%-8,60</area>
                         <font>basesmalllightgrey</font>
@@ -257,8 +282,56 @@
                         <align>allcenter</align>
                     </textarea>
                 </state>
-                <state name="selectedinactive" from="active">
+                <state name="active" from="inactive">
+                    <area>0,0,372,167</area>
+                    <shape name="selectbar">
+                        <area>0,0,0,0</area>
+                    </shape>
+                    <shape name="spacer">
+                        <area>0,0,100%,167</area>
+                        <fill color="#0c2471" alpha="160" />
+                        <fill color="#000000" alpha="0" />
+                    </shape>
+                    <shape name="boxselectbar" from="baseselectbar_active">
+                        <area>8,8,356,151</area>
+                        <alpha>128</alpha>
+                    </shape>
+                    <textarea name="buttontext">
+                        <area>8,0,100%-8,78</area>
+                        <font>basesmall_normal</font>
+                        <cutdown>yes</cutdown>
+                        <multiline>yes</multiline>
+                        <align>allcenter</align>
+                        <alpha>0</alpha>
+                    </textarea>
+                    <shape name="namebg">
+                        <area>8,8,100%-8,101</area>
+                        <fill color="#000000" alpha="32" />
+                    </shape>
+                    <textarea name="name">
+                        <area>16,8,100%-16,101</area>
+                        <font>basesmall</font>
+                        <cutdown>yes</cutdown>
+                        <multiline>yes</multiline>
+                        <align>allcenter</align>
+                    </textarea>
+                    <shape name="testbg">
+                        <area>8,90,100%,36</area>
+                        <fill color="#000000" alpha="0" />
+                    </shape>
+                    <textarea name="reccount">
+                        <area>8,109,100%-8,50</area>
+                        <font>basesmalllightgrey</font>
+                        <cutdown>no</cutdown>
+                        <align>allcenter</align>
+                        <template>%n recording(s)</template>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="inactive">
                     <area>0,0,404,60</area>
+                    <area>0,0,604,60</area>
+                    <shape name="spacer">
+                    </shape>
                     <shape name="selectbar">
                         <area>0,0,100%,60</area>
 <!--                         <fill color="#0096ff" alpha="96" /> -->
@@ -282,26 +355,35 @@
                         <alpha>0</alpha>
                     </textarea>
                     <textarea name="name">
-                        <area>4,0,294,60</area>
+                        <area>4,0,444,60</area>
                         <font>basesmall</font>
                         <cutdown>no</cutdown>
                         <align>allcenter</align>
                     </textarea>
                     <shape name="reccountbg">
-                        <area>302,0,100%,60</area>
+                        <area>452,0,100%,60</area>
                         <fill color="#000000" alpha="32" />
                     </shape>
                     <textarea name="reccount">
-                        <area>310,0,100%-8,60</area>
+                        <area>460,0,100%-8,60</area>
                         <font>basesmalllightergrey</font>
                         <cutdown>no</cutdown>
                         <align>allcenter</align>
+<!--                         <template>%1</template> -->
                     </textarea>
                 </state>
                 <state name="selectedactive" from="active">
-                    <area>0,0,404,60</area>
+                    <area>0,0,372,167</area>
                     <shape name="selectbar">
-                        <area>0,0,100%,60</area>
+                        <area>0,0,0,0</area>
+                    </shape>
+                    <shape name="spacer">
+                        <area>0,0,100%,167</area>
+                        <fill color="#0c2471" alpha="160" />
+                        <fill color="#000000" alpha="0" />
+                    </shape>
+                    <shape name="boxselectbar">
+                        <area>8,8,356,151</area>
 <!--                         <fill color="#0096ff" alpha="192" /> -->
                         <fill style="gradient">
                             <gradient direction="vertical" alpha="255">
@@ -319,26 +401,27 @@
                         <align>allcenter</align>
                         <alpha>0</alpha>
                     </textarea>
-                    <textarea name="name">
-                        <area>4,0,294,60</area>
-                        <font>basesmall_normal_selected</font>
-                        <cutdown>no</cutdown>
-                        <scroll direction="horizontal" startdelay="1.25" returndelay="1.25" />
-                        <align>allcenter</align>
-                    </textarea>
-                    <shape name="reccountbg">
-                        <area>302,0,100%,60</area>
+                    <shape name="namebg">
+                        <area>8,109,100%-8,50</area>
                         <fill color="#000000" alpha="24" />
                     </shape>
+                    <textarea name="name">
+                        <area>16,8,100%-16,101</area>
+                        <font>basesmall_normal_selected</font>
+                        <cutdown>no</cutdown>
+                        <scroll direction="vertical" startdelay="1.25" returndelay="1.25" />
+                        <align>allcenter</align>
+                    </textarea>
                     <textarea name="reccount">
-                        <area>310,0,100%-8,60</area>
+                        <area>8,109,100%-8,50</area>
                         <font>basesmalldarkergrey</font>
                         <cutdown>no</cutdown>
                         <align>allcenter</align>
+                        <template>%n recording(s)</template>
                     </textarea>
                 </state>
             </statetype>
-            <scrollbar name="scrollbar" from="basenoscrollbar" />
+<!--             <scrollbar name="scrollbar" from="basenoscrollbar" /> -->
             <statetype name="upscrollarrow">
                 <position>360,465</position>
                 <alpha>0</alpha>
@@ -350,7 +433,7 @@
         </buttonlist>
         
         
-        <shape name="recordings_bg">
+        <shape name="recordings_bg" depends="timedate">
             <area>32,411,1856,609</area>
             <fill style="gradient">
                 <gradient direction="vertical" alpha="255">
@@ -363,13 +446,13 @@
             <alpha>255</alpha>
         </shape>
         
-        <textarea name="freereport" from="basetextarea">
+        <textarea name="freereport" from="basetextarea" depends="timedate">
             <area>0,413,550,30</area>
             <font>basesmall</font>
             <align>right,vcenter</align>
         </textarea>
         
-        <progressbar name="usedbar">
+        <progressbar name="usedbar" depends="timedate">
             <area>566,423,1242,16</area>
             <layout>horizontal</layout>
             <style>reveal</style>
@@ -416,6 +499,7 @@
             <scrollstyle>free</scrollstyle>
             <spacing>10</spacing>
             <searchposition>-1,585</searchposition>
+            <triggerevent context="Global" action="LEFT">ESCAPE</triggerevent>
             <statetype name="buttonitem">
                 <state name="active">
                     <area>0,0,1824,60</area>
@@ -681,165 +765,6 @@
                     </statetype>
                     
                 </state>
-                <state name="selectedinactive" from="active">
-                    <shape name="selectbar">
-                        <fill color="#ffdd00" alpha="192" />
-                        <alpha>255</alpha>
-                    </shape>
-                    <shape name="selectbar_subtitle">
-                        <fill color="#ffdd00" alpha="192" />
-                        <alpha>255</alpha>
-                    </shape>
-                    <shape name="selectbar_channel">
-                        <fill color="#ffdd00" alpha="192" />
-                        <alpha>255</alpha>
-                    </shape>
-                    <shape name="selectbar_size">
-                        <fill color="#ffdd00" alpha="192" />
-                        <alpha>255</alpha>
-                    </shape>
-                    <shape name="selectbar_liststatus">
-                        <fill color="#ffdd00" alpha="192" />
-                        <alpha>255</alpha>
-                    </shape>
-                    <shape name="selectbar_startdate">
-                        <fill color="#ffdd00" alpha="192" />
-                        <alpha>255</alpha>
-                    </shape>
-                    <shape name="selectbar_starttime">
-                        <fill color="#ffdd00" alpha="192" />
-                        <alpha>255</alpha>
-                    </shape>
-                    
-                    <!-- font: basesmall_normal_selected_inactive -->
-                    <textarea name="recordings_template" from="buttontext">
-                        <font>basesmall_normal_selected_inactive</font>
-                        <font state="disabled">basesmall_disabled_selected</font>
-                        <font state="error">basesmall_error_selected</font>
-                        <font state="warning">basesmall_warning_selected</font>
-                        <font state="normal">basesmall_normal_selected_inactive</font>
-                        <font state="running">basesmall_running_selected</font>
-                        <align>allcenter</align>
-                    </textarea>                    
-                    <textarea name="title" from="recordings_template">
-                        <area>0,0,325,60</area>
-                    </textarea>
-                    <textarea name="subtitle" from="recordings_template">
-                        <area>349,0,514,60</area>
-                        <align>vcenter,left</align>
-                    </textarea>
-                    <textarea name="s00e00" from="recordings_template" depends="!subtitle">
-                        <area>349,0,514,60</area>
-                        <align>vcenter,left</align>
-                        <cutdown>yes</cutdown>
-                    </textarea>
-                    <textarea name="category" from="recordings_template" depends="!subtitle&amp;!s00e00">
-                        <area>349,0,514,60</area>
-                        <align>vcenter,left</align>
-                        <cutdown>yes</cutdown>
-<!--                         <template>%TITLE| %%[|CATEGORY|]%% |YEAR%% |STARS%</template> -->
-                        <template>%TITLE%% |YEARSTARS%% ‹|CATEGORY|›%</template>
-                    </textarea>
-                    <textarea name="callsign" from="recordings_template">
-                        <area>891,0,200,60</area>
-                        <align>hcenter,vcenter</align>
-                        <cutdown>no</cutdown>
-                    </textarea>
-                    <textarea name="filesize_str" from="recordings_template">
-                        <area>1111,0,152,60</area>
-                        <align>hcenter,vcenter</align>
-                        <cutdown>no</cutdown>
-                    </textarea>
-                    <textarea name="shortstartdate" from="recordings_template">
-                        <area>1465,0,198,60</area>
-                        <align>hcenter,vcenter</align>
-                    </textarea>
-                    <textarea name="starttime" from="recordings_template">
-                        <area>1679,0,145,60</area>
-                        <align>hcenter,vcenter</align>
-                        <cutdown>no</cutdown>
-                    </textarea>
-                    
-                    <statetype name="jobstate">
-                        <area>1285,6,48,48</area>
-                        <state name="recording">
-                            <imagetype name="jobstaterecording">
-                                <area>0,0,48,48</area>
-                                <filename>statusicons/running-black.png</filename>
-<!--                                 <alpha>160</alpha> -->
-                                <alpha>192</alpha>
-                            </imagetype>
-                        </state>
-                        <state name="transcoding" />
-                    </statetype>
-                    <statetype name="commflagged">
-                        <area>1285,6,48,48</area>
-                        <state name="yes">
-                            <imagetype name="commflaggedyes">
-                                <area>0,0,48,48</area>
-                                <filename>statusicons/commflag4-black.png</filename>
-                                <alpha>160</alpha>
-                            </imagetype>
-                        </state>
-                        <state name="no">
-                        </state>
-                    </statetype>
-                    
-                    <statetype name="preserved">
-                        <area>1339,6,48,48</area>
-                        <state name="yes">
-                            <imagetype name="preservedyes">
-                                <area>0,0,48,48</area>
-                                <filename>statusicons/noautoexpire-black.png</filename>
-                                <alpha>160</alpha>
-                            </imagetype>
-                        </state>
-                    </statetype>
-                    <statetype name="autoexpire" depends="!preserved">
-                        <area>1339,6,48,48</area>
-<!-- 
-                        <state name="yes">
-                            <imagetype name="autoexpireyes">
-                                <area>0,0,48,48</area>
-                                <filename>statusicons/autoexpire-2.png</filename>
-                                <alpha>160</alpha>
-                            </imagetype>
-                        </state>
- -->
-                        <state name="no">
-                            <imagetype name="autoexpireno">
-                                <area>0,0,48,48</area>
-                                <filename>statusicons/noautoexpire-black.png</filename>
-                                <alpha>160</alpha>
-                            </imagetype>
-                        </state>
-                    </statetype>
-
-                    <statetype name="watched">
-                        <area>1393,6,48,48</area>
-                        <state name="yes">
-                            <imagetype name="watchedyes">
-                                <area>0,0,48,48</area>
-                                <filename>statusicons/watched-black.png</filename>
-                                <alpha>160</alpha>
-                            </imagetype>
-                        </state>
-                        <state name="no">
-                        </state>
-                    </statetype>
-                    <statetype name="bookmark" depends="!watched">
-                        <area>1393,6,48,48</area>
-                        <state name="yes">
-                            <imagetype name="bookmarkyes">
-                                <area>0,0,48,48</area>
-                                <filename>statusicons/halfwatched-black.png</filename>
-                                <alpha>160</alpha>
-                            </imagetype>
-                        </state>
-                        <state name="no">
-                        </state>
-                    </statetype>
-                </state>
                 <state name="selectedactive" from="active">
                     <shape name="selectbar">
                         <fill style="gradient">
@@ -1010,6 +935,12 @@
                     </imagetype>
  -->
                 </state>
+                <state name="inactive">
+                    <area>0,0,0,0</area>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,0,0</area>
+                </state>
             </statetype>
 <!-- 
             <statetype name="upscrollarrow">
@@ -1023,6 +954,9 @@
                 <area>100%-8,0,8,100%</area>
             </scrollbar>
         </buttonlist>
+        
+        
+        
         
 <!-- 
         <shape name="iconarea">
