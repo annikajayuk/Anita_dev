@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythmenu name="ANITA_ABOUT">
+    
+    <button>
+        <type>ANITA_ABOUT_BATCH</type>
+        <text>Batch icons by Adam Whitcroft</text>
+        <description></description>
+        <action>MENU</action>
+    </button>
+    
+<!-- 
+    <button>
+        <type>ANITA_ABOUT_CUSTOMISE</type>
+        <text>Customise Anita</text>
+        <description>Change Anita’s look.</description>
+        <action>MENU mainmenu/anita-customise.xml</action>
+    </button>
+ -->
+    
+</mythmenu>

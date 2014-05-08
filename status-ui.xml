@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="status">
+        
+        <group name="titlebar" from="basetitlebar">
+            <area>0,0,1920,58</area>
+            
+            <textarea name="heading" from="basetb-title">
+                <value>System Status</value>
+            </textarea>
+            
+            <group name="titleicons" from="basetitleicons_status" />
+        </group>
+        
+        <shape name="groups_bg">
+            <area>32,333,1856,60</area>
+            <fill style="gradient">
+                <gradient direction="vertical" alpha="255">
+                    <stop position="0" color="#000000" alpha="0" />
+                    <stop position="2" color="#000000" alpha="0" />
+                    <stop position="4" color="#000000" alpha="64" />
+                    <stop position="8" color="#666666" alpha="128" />
+                    <stop position="16" color="#001c53" alpha="128" />
+                    <stop position="67" color="#001c53" alpha="144" />
+                    <stop position="88" color="#001c53" alpha="144" />
+                    <stop position="100" color="#001c53" alpha="216" />
+                </gradient>
+            </fill>
+            <alpha>255</alpha>
+        </shape>
+        
+        <buttonlist name="category" from="basebuttonlist2">
+            <area>0,60,1920,45</area>
+            <area>32,333,1856,60</area>
+            <layout>horizontal</layout>
+            <arrange>stack</arrange>
+            <align>top,hcenter</align>
+            <spacing>0</spacing>
+            <statetype name="buttonitem">
+                <area>0,0,304,60</area>
+                <state name="active">
+                    <area>0,0,304,60</area>
+                    <shape name="selectbar" from="baseselectbar_active">
+                        <alpha>0</alpha>
+                    </shape>
+                    <textarea name="buttontext">
+                        <area>4,0,100%-4,60</area>
+                        <align>allcenter</align>
+                        <font>basesmalllightgrey</font>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+<!--                     <area>0,0,309,60</area> -->
+                    <shape name="selectbar" from="baseselectbar_selectedactive">
+                        <area>0,0,100%,60</area>
+                    </shape>
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
+                        <font>basesmall_normal_selected</font>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="active">
+<!--                     <area>0,0,309,60</area> -->
+                    <shape name="selectbar">
+                        <area>0,0,100%,60</area>
+<!--                         <fill color="#0096ff" alpha="96" /> -->
+                        <fill style="gradient">
+                            <gradient direction="vertical" alpha="255">
+                                <stop position="0" color="#000000" alpha="0" />
+                                <stop position="2" color="#0045cb" alpha="144" />
+                                <stop position="10" color="#0057ff" alpha="160" />
+                                <stop position="67" color="#0057ff" alpha="176" />
+                                <stop position="88" color="#0057ff" alpha="176" />
+                                <stop position="100" color="#001c53" alpha="216" />
+                            </gradient>
+                        </fill>
+                        <alpha>255</alpha>
+                    </shape>
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
+                        <font>basesmall</font>
+                    </textarea>
+                </state>
+            </statetype>
+            <scrollbar name="scrollbar" from="basenoscrollbar" />
+            <searchposition>-1,490</searchposition>
+        </buttonlist>
+        
+        <shape name="recordings_bg">
+            <area>32,393,1856,631</area>
+            <fill style="gradient">
+                <gradient direction="vertical" alpha="255">
+                    <stop position="0" color="#001c53" alpha="216" />
+                    <stop position="15" color="#001c53" alpha="192" />
+                    <stop position="90" color="#001c53" alpha="160" />
+                    <stop position="100" color="#001c53" alpha="0" />
+                </gradient>
+            </fill>
+            <alpha>255</alpha>
+        </shape>
+
+        <buttonlist name="log" from="basebuttonlist2">
+            <area>0,107,1920,720</area>
+            <area>48,403,1824,620</area>
+            <area>48,403,1824,606</area>
+            <searchposition>-1,490</searchposition>
+            <scrollbar name="scrollbar" from="basevertscrollbar">
+                <area>100%-8,0,8,100%</area>
+            </scrollbar>
+        </buttonlist>
+        
+        <shape name="helptextbg">
+            <area>20,90,1880,236</area>
+            <fill color="#ffffff" alpha="0" />
+        </shape>
+        
+        <textarea name="helptextlabel" from="basetextarea">
+            <area>20,90,1880,236</area>
+            <font>basemediumblue</font>
+            <value>Details</value>
+        </textarea>
+        
+        <textarea name="helptext" from="basetextarea">
+            <area>8,837,1904,183</area>
+            <area>20,140,1690,186</area>
+            <value>This screen displays the status of various system components</value>
+            <multiline>yes</multiline>
+            <scroll direction="vertical" />
+        </textarea>
+        
+        <group name="colourbar" from="basecolourbar">
+            <group name="bcb-b">
+                <alpha>0</alpha>
+            </group>
+        </group>
+    </window>
+    
+</mythuitheme>
+

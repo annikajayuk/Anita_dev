@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythmenu name="ANITA_FONT">
+    
+    <button>
+        <type>ANITA_FONT_DROIDSANS</type>
+        <text>Droid Sans</text>
+        <description>The default.</description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh font-droidsans reload</action>
+    </button>
+    
+    <button>
+        <type>ANITA_FONT_LUCIDAGRANDE</type>
+        <text>Lucida Grande</text>
+        <description>Macintosh only.</description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh font-lucidagrande reload</action>
+    </button>
+    
+    <button>
+        <type>ANITA_FONT_UBUNTU</type>
+        <text>Ubuntu</text>
+        <description></description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh font-ubuntu reload</action>
+    </button>
+    
+</mythmenu>

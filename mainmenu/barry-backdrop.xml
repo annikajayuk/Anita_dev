@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythmenu name="ANITA_BACKDROP">
+    
+    <button>
+        <type>ANITA_BACKDROP_PIXELATE</type>
+        <text>Pixelate</text>
+        <description>The default.</description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh backdrop-sj_pixelate1 reload</action>
+    </button>
+    
+    <button>
+        <type>ANITA_BACKDROP_NOISYPIXELS</type>
+        <text>Noisy Pixels</text>
+        <description></description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh backdrop-sj_noisypixels1 reload</action>
+    </button>
+    
+    <button>
+        <type>ANITA_BACKDROP_LYRAPIXELS</type>
+        <text>Lyra Pixels</text>
+        <description></description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh backdrop-sj_lyrapixels1 reload</action>
+    </button>
+    
+    <button>
+        <type>ANITA_BACKDROP_NONE</type>
+        <text>Black</text>
+        <description></description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh backdrop-sj_black reload</action>
+    </button>
+    
+</mythmenu>

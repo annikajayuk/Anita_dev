@@ -1,0 +1,2376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+    <!-- 720->1080 *1.5: done -->
+
+    <!-- Base Font Definitions -->
+    <fontdef name="basesmall" face="Lato"><!-- anita-font-primary -->
+        <pixelsize>34</pixelsize>
+        <color>#EEEEEE</color>
+        <weight>normal</weight>
+    </fontdef>
+
+    <fontdef name="basesmaller" from="basesmall">
+        <pixelsize>28</pixelsize>
+    </fontdef>
+
+    <fontdef name="basesmallbold" from="basesmall">
+        <weight>bold</weight>
+    </fontdef>
+
+    <fontdef name="basesmallblack" from="basesmall">
+        <color>#000000</color>
+    </fontdef>
+
+    <fontdef name="basesmalldarkergrey" from="basesmall">
+        <color>#222222</color>
+    </fontdef>
+
+    <fontdef name="basesmalldarkgrey" from="basesmall">
+        <color>#333333</color>
+    </fontdef>
+
+    <fontdef name="basesmallblue" from="basesmall">
+        <color>#58baff</color>
+    </fontdef>
+
+    <fontdef name="basesmalllightgrey" from="basesmall">
+        <color>#cccccc</color>
+    </fontdef>
+
+    <fontdef name="basesmalllightergrey" from="basesmall">
+        <color>#dddddd</color>
+    </fontdef>
+
+    <fontdef name="helptext_font" from="basesmall">
+        <color>#EEEEEE</color>
+    </fontdef>
+
+    <fontdef name="helptext_label_font" from="basesmall">
+        <color>#AAAAAA</color>
+    </fontdef>
+
+    <fontdef name="small" from="basesmall">
+        <shadowcolor>#000000</shadowcolor>
+        <shadowoffset>2,2</shadowoffset>
+        <shadowalpha>0</shadowalpha>
+    </fontdef>
+
+    <fontdef name="basemedium" from="basesmall" face="Lato"><!-- anita-font-primary -->
+        <pixelsize>40</pixelsize>
+    </fontdef>
+
+    <fontdef name="basemediumbold" from="basemedium">
+        <pixelsize>40</pixelsize>
+        <weight>bold</weight>
+    </fontdef>
+
+    <fontdef name="basemediumblack" from="basemedium">
+        <color>#000000</color>
+    </fontdef>
+
+    <fontdef name="basemediumblue" from="basemedium">
+        <color>#58baff</color>
+    </fontdef>
+
+    <fontdef name="basemedium_title" from="basemedium">
+        <color>#ffffff</color>
+    </fontdef>
+
+    <fontdef name="baselarge" from="basemedium">
+        <pixelsize>46</pixelsize>
+        <shadowcolor>#000000</shadowcolor>
+        <shadowoffset>2,2</shadowoffset>
+        <shadowalpha>100</shadowalpha>
+        <weight>bold</weight>
+    </fontdef>
+
+    <fontdef name="baselargenormal" from="baselarge">
+        <weight>normal</weight>
+    </fontdef>
+
+    <fontdef name="baselargenormalblue" from="baselargenormal">
+        <color>#58baff</color>
+    </fontdef>
+
+    <fontdef name="baseextralarge" from="baselarge">
+        <pixelsize>52</pixelsize>
+        <shadowcolor>#000000</shadowcolor>
+        <shadowoffset>4,4</shadowoffset>
+        <shadowalpha>64</shadowalpha>
+        <weight>bold</weight>
+    </fontdef>
+
+    <!-- State variations on small font -->
+    <fontdef name="basesmall_normal_selected" from="basesmall">
+        <color>#000000</color>
+    </fontdef>
+    <fontdef name="basesmall_normal" from="basesmall">
+        <color>#9999cc</color>
+        <color>#58baff</color>
+    </fontdef>
+    <fontdef name="basesmall_normal_inactive" from="basesmall">
+        <color>#888888</color>
+    </fontdef>
+    <fontdef name="basesmall_normal_selected_inactive" from="basesmall">
+        <color>#222222</color>
+    </fontdef>
+    <fontdef name="basesmall_warning_selected" from="basesmall">
+<!--         <color>#ffff66</color> -->
+<!-- 
+        <color>#e6e65c</color>
+        <outlinecolor>#000000</outlinecolor>
+        <outlinesize>8</outlinesize>
+ -->
+<!--         <color>#555500</color> -->
+        <color>#804a00</color>
+    </fontdef>
+    <fontdef name="basesmall_warning" from="basesmall">
+<!--         <color>#bbbb33</color> -->
+        <color>#ff9300</color>
+    </fontdef>
+    <fontdef name="basesmall_favourite_selected" from="basesmallbold">
+        <color>#dddd44</color>
+    </fontdef>
+    <fontdef name="basesmall_favourite" from="basesmall">
+        <color>#bbbb33</color>
+    </fontdef>
+    <fontdef name="basesmall_favourite_unavailable" from="basesmall">
+        <color>#9999cc</color>
+    </fontdef>
+    <fontdef name="basesmall_error_selected" from="basesmall">
+        <color>#900800</color>
+        <color>#a70000</color>
+    </fontdef>
+    <fontdef name="basesmall_error" from="basesmall">
+        <color>#e50000</color>
+    </fontdef>
+    <fontdef name="basesmall_disabled_selected" from="basesmall">
+        <color>#555555</color>
+    </fontdef>
+    <fontdef name="basesmall_disabled" from="basesmall">
+        <color>#999999</color>
+    </fontdef>
+    <fontdef name="basesmall_running_selected" from="basesmall">
+        <color>#005500</color>
+    </fontdef>
+    <fontdef name="basesmall_running" from="basesmall">
+        <color>#11DD11</color>
+    </fontdef>
+    <fontdef name="basesmall_textedit" from="basesmall">
+        <color>#000000</color>
+    </fontdef>
+    <fontdef name="basesmall_normal_button" from="basesmallbold">
+        <color>#FFFFFF</color>
+    </fontdef>
+    <fontdef name="basesmall_selected_button" from="basesmallbold">
+        <color>#FFFFFF</color>
+    </fontdef>
+    <fontdef name="basesmall_disabled_button" from="basesmallbold">
+        <color>#9999cc</color>
+    </fontdef>
+    <!-- State variations on medium font -->
+    <fontdef name="basemedium_normal" from="basemediumbold">
+        <color>#9999cc</color>
+    </fontdef>
+    <fontdef name="basemedium_normal_selected" from="basemedium">
+        <color>#FFFFFF</color>
+    </fontdef>
+    <fontdef name="basemedium_disabled" from="basemedium">
+        <color>#666666</color>
+    </fontdef>
+    <fontdef name="basemedium_highlight" from="basemediumbold">
+        <color>#FFFF33</color>
+    </fontdef>
+    <fontdef name="basemedium_normal_button" from="basemedium">
+        <color>#FFFFFF</color>
+    </fontdef>
+    <fontdef name="basemedium_selected_button" from="basemediumbold">
+        <color>#FFFFFF</color>
+    </fontdef>
+    <fontdef name="basemedium_disabled_button" from="basemedium">
+        <color>#999999</color>
+    </fontdef>
+
+    <!-- Fonts for specific screens -->
+    <fontdef name="baseguide" from="basesmall">
+        <pixelsize>31</pixelsize>
+        <weight>normal</weight>
+    </fontdef>
+
+    <!-- Base definition of a shape used as a background on many screens -->
+    <shape name="basebackground">
+        <area>0,0,15,15</area>
+        <type>roundbox</type>
+        <fill color="#000000" alpha="120" />
+        <line color="#FFFFFF" alpha="255" width="2" />
+        <cornerradius>2</cornerradius>
+    </shape>
+
+    <!-- Base definition of a shape used as a background on many popups -->
+    <shape name="basepopupshade">
+        <fill color="#000000" alpha="120" />
+    </shape>
+
+    <!-- Base definition of a shape used as a background on many popups -->
+    <shape name="basepopupbackground" from="basebackground">
+        <fill color="#303030" alpha="232" />
+        <line color="#000000" alpha="255" width="2" />
+        <cornerradius>0</cornerradius>
+    </shape>
+
+    <shape name="basepopupbackground_opaque" from="basebackground">
+        <fill color="#292929" alpha="255" />
+        <line color="#000000" alpha="255" width="2" />
+        <cornerradius>0</cornerradius>
+    </shape>
+
+    <group name="selector_105">
+        <area>120,100,300,105</area>
+
+        <imagetype name="selector_105-left-top">
+            <area>0,0,52,52</area>
+            <filename>ui/selectbar_slices/left-top.png</filename>
+            <alpha>250</alpha>
+        </imagetype>
+        <imagetype name="selector_105-left-middle">
+            <area>0,52,52,1</area>
+            <filename>ui/selectbar_slices/left-middle.png</filename>
+            <alpha>250</alpha>
+        </imagetype>
+        <imagetype name="selector_105-left-bottom">
+            <area>0,53,52,52</area>
+            <filename>ui/selectbar_slices/left-bottom.png</filename>
+            <alpha>250</alpha>
+        </imagetype>
+
+        <imagetype name="selector_105-centre-top">
+            <area>52,0,100%-52,52</area>
+            <filename>ui/selectbar_slices/centre-top.png</filename>
+        </imagetype>
+        <imagetype name="selector_105-centre-middle">
+            <area>52,52,100%-52,1</area>
+            <filename>ui/selectbar_slices/centre-middle.png</filename>
+        </imagetype>
+        <imagetype name="selector_105-centre-bottom">
+            <area>52,53,100%-52,52</area>
+            <filename>ui/selectbar_slices/centre-bottom.png</filename>
+        </imagetype>
+
+        <imagetype name="selector_105-right-top">
+            <area>100%-52,0,52,52</area>
+            <filename>ui/selectbar_slices/right-top.png</filename>
+            <alpha>250</alpha>
+        </imagetype>
+        <imagetype name="selector_105-right-middle">
+            <area>100%-52,52,52,1</area>
+            <filename>ui/selectbar_slices/right-middle.png</filename>
+            <alpha>250</alpha>
+        </imagetype>
+        <imagetype name="selector_105-right-bottom">
+            <area>100%-52,53,52,52</area>
+            <filename>ui/selectbar_slices/right-bottom.png</filename>
+            <alpha>250</alpha>
+        </imagetype>
+
+    </group>
+
+    <!-- Base definition of a shape used as a background to many widgets -->
+    <shape name="basewidgetshape">
+        <area>0,0,100%,100%</area>
+        <type>box</type>
+        <fill style="gradient">
+            <gradient direction="vertical" alpha="255">
+                <stop position="0" color="#888888" />
+                <stop position="50" color="#888888" />
+                <stop position="100" color="#666666" />
+            </gradient>
+        </fill>
+        <alpha>80</alpha>
+    </shape>
+
+    <shape name="baseselectedwidgetshape" from="basewidgetshape">
+        <fill style="gradient">
+            <gradient direction="vertical" alpha="255">
+                <stop position="0" color="#ffdd00" />
+                <stop position="50" color="#ffdd00" />
+                <stop position="100" color="#ccb100" />
+            </gradient>
+        </fill>
+        <alpha>255</alpha>
+    </shape>
+
+    <shape name="baseinactivewidgetshape" from="basewidgetshape">
+        <!-- anita-selectcolour-normal --><fill color="#0096ff" alpha="96" />
+    </shape>
+
+    <shape name="basedisabledwidgetshape" from="basewidgetshape">
+<!--         <fill color="#222222" alpha="128" /> -->
+        <fill style="gradient">
+            <gradient direction="vertical" alpha="255">
+                <stop position="0" color="#333333" />
+                <stop position="50" color="#333333" />
+                <stop position="100" color="#222222" />
+            </gradient>
+        </fill>
+        <alpha>80</alpha>
+    </shape>
+
+    <scrollbar name="basenoscrollbar" />
+
+    <!-- Base definition of a vertical scrollbar -->
+    <scrollbar name="basevertscrollbar">
+        <area>1671,0,12,1455</area>
+        <layout>vertical</layout>
+        <hidedelay>2000</hidedelay>
+        <shape name="background">
+            <area>0,0,100%,100%</area>
+            <type>box</type>
+            <fill color="#999999" alpha="128" />
+        </shape>
+        <shape name="slider">
+            <area>0,0,100%,16</area>
+            <type>box</type>
+            <fill color="#ffffff" alpha="192" />
+        </shape>
+    </scrollbar>
+
+    <!-- Base definition of a horizontal scrollbar -->
+    <scrollbar name="basehorizscrollbar" from="basevertscrollbar">
+        <area>30,1545,2820,12</area>
+        <layout>horizontal</layout>
+        <shape name="slider">
+            <area>0,0,16,100%</area>
+        </shape>
+    </scrollbar>
+
+    <buttonlist name="basebuttonlist">
+        <area>0,0,450,375</area>
+        <layout>vertical</layout>
+        <spacing>8</spacing>
+        <buttonarea>0,0,100%,100%</buttonarea>
+        <statetype name="buttonitem">
+            <area>0,0,100%,60</area>
+            <state name="active">
+                <area>0,0,100%,60</area>
+                <shape name="background">
+                    <area>0,0,100%,100%</area>
+<!--                     <fill color="#ffffff" alpha="32" /> -->
+                    <fill style="gradient">
+                        <gradient direction="vertical" alpha="255">
+                            <stop position="0" color="#888888" />
+                            <stop position="50" color="#888888" />
+                            <stop position="100" color="#666666" />
+                        </gradient>
+                    </fill>
+                    <alpha>80</alpha>
+                </shape>
+                <textarea name="buttontext">
+                    <area>9,0,95%,60</area>
+                    <font>basesmall</font>
+                    <cutdown>yes</cutdown>
+                    <align>left,vcenter</align>
+                </textarea>
+                <statetype name="buttoncheck">
+                    <position>91%,6</position>
+                    <state type="off">
+                        <imagetype name="checkoff">
+                            <filename>lb-check-empty.png</filename>
+                        </imagetype>
+                    </state>
+                    <state type="half">
+                        <imagetype name="checkhalf">
+                            <filename>lb-check-half.png</filename>
+                        </imagetype>
+                    </state>
+                    <state type="full">
+                        <imagetype name="checkfull">
+                            <filename>lb-check-full.png</filename>
+                        </imagetype>
+                    </state>
+                </statetype>
+                <imagetype name="buttonarrow">
+                    <area>94%,18,24,24</area>
+                    <filename>lb-arrow.png</filename>
+                </imagetype>
+            </state>
+            <state name="selectedactive" from="active">
+                <shape name="background">
+<!--                     <fill color="#0096ff" alpha="192" /> -->
+                    <fill style="gradient">
+                        <gradient direction="vertical" alpha="255">
+                            <stop position="0" color="#ffdd00" />
+                            <stop position="50" color="#ffdd00" />
+                            <stop position="100" color="#ccb100" />
+                        </gradient>
+                    </fill>
+                    <alpha>255</alpha>
+                </shape>
+                <textarea name="buttontext">
+                    <font>basesmallblack</font>
+                </textarea>
+            </state>
+            <state name="selectedinactive" from="active">
+                <shape name="background">
+<!--                     <fill color="#0096ff" alpha="96" /> -->
+                    <fill color="#ffdd00" alpha="192" />
+                    <alpha>255</alpha>
+                </shape>
+                <textarea name="buttontext">
+                    <font>basesmall_normal_inactive</font>
+                </textarea>
+            </state>
+        </statetype>
+        <scrollbar name="scrollbar" from="basevertscrollbar">
+            <area>100%-8,0,8,100%</area>
+        </scrollbar>
+        <statetype name="upscrollarrow">
+            <position>100%-27,0</position>
+<!-- 
+            <state type="off">
+                <imagetype name="upon">
+                    <filename>lb-uparrow-reg.png</filename>
+                </imagetype>
+            </state>
+ -->
+            <state type="full">
+                <imagetype name="upoff">
+                    <filename>lb-uparrow-sel.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <position>100%-27,100%-18</position>
+<!-- 
+            <state type="off">
+                <imagetype name="dnon">
+                    <filename>lb-dnarrow-reg.png</filename>
+                </imagetype>
+            </state>
+ -->
+            <state type="full">
+                <imagetype name="dnoff">
+                    <filename>lb-dnarrow-sel.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </buttonlist>
+    
+    <shape name="baseselectbar_active">
+        <area>0,0,100%,45</area>
+        <type>box</type>
+<!-- 
+        <fill color="#ffffff" alpha="32" />
+        <alpha>255</alpha>
+ -->
+        <fill style="gradient">
+            <gradient direction="vertical" alpha="255">
+                <stop position="0" color="#888888" />
+                <stop position="50" color="#888888" />
+                <stop position="100" color="#666666" />
+            </gradient>
+        </fill>
+        <alpha>80</alpha>
+    </shape>
+    
+    <shape name="baseselectbar_selectedactive">
+        <area>0,0,100%,45</area>
+        <type>box</type>
+<!-- 
+        <fill color="#0096ff" alpha="192" />
+        <alpha>255</alpha>
+ -->
+        <fill style="gradient">
+            <gradient direction="vertical" alpha="255">
+                <stop position="0" color="#ffdd00" />
+                <stop position="50" color="#ffdd00" />
+                <stop position="100" color="#ccb100" />
+            </gradient>
+        </fill>
+        <alpha>255</alpha>
+    </shape>
+    
+    
+    <shape name="baseselectbar_selectedinactive">
+        <area>0,0,100%,45</area>
+        <type>box</type>
+<!-- 
+        <fill color="#0096ff" alpha="96" />
+        <alpha>255</alpha>
+ -->
+        <fill color="#ffdd00" alpha="192" />
+        <alpha>255</alpha>
+    </shape>
+    
+    <!-- Base definition of a buttonlist in wide configuration -->
+    <buttonlist name="basebuttonlist2">
+        <area>0,0,1860,540</area>
+        <layout>vertical</layout>
+        <spacing>6</spacing>
+        <wrapstyle>selection</wrapstyle>
+        <buttonarea>0,0,100%,100%</buttonarea>
+        <statetype name="buttonitem">
+            <area>0,0,100%,45</area>
+            <state name="active">
+                <area>0,0,100%,45</area>
+                <shape name="selectbar" from="baseselectbar_active">
+                    <area>0,0,100%,45</area>
+<!--                     <line color="#00FF00" alpha="255" width="1" /> -->
+<!--                     <fill color="#ff0000" alpha="192" /> -->
+<!--                     <cornerradius>2</cornerradius> -->
+<!-- 
+                    <type>box</type>
+                    <fill color="#ffffff" alpha="32" />
+                    <alpha>255</alpha>
+ -->
+                </shape>
+                <textarea name="buttontext">
+                    <area>8,0,100%-8,45</area>
+                    <font>basesmall_normal</font>
+                    <font state="disabled">basesmall_disabled</font>
+                    <font state="error">basesmall_error</font>
+                    <font state="warning">basesmall_warning</font>
+                    <font state="normal">basesmall_normal</font>
+                    <font state="running">basesmall_running</font>
+                    <align>vcenter</align>
+                </textarea>
+            </state>
+            <state name="selectedactive" from="active">
+                <shape name="selectbar" from="baseselectbar_selectedactive">
+                    <area>0,0,100%,45</area>
+<!--                     <line color="#00FF00" alpha="255" width="1" /> -->
+<!--                     <cornerradius>2</cornerradius> -->
+<!-- 
+                    <type>box</type>
+                    <fill color="#0096ff" alpha="192" />
+                    <alpha>255</alpha>
+ -->
+                </shape>
+                <textarea name="buttontext">
+                    <area>8,0,100%-8,45</area>
+                    <font>basesmall_normal_selected</font>
+                    <font state="disabled">basesmall_disabled_selected</font>
+                    <font state="error">basesmall_error_selected</font>
+                    <font state="warning">basesmall_warning_selected</font>
+                    <font state="normal">basesmall_normal_selected</font>
+                    <font state="running">basesmall_running_selected</font>
+                    <align>vcenter</align>
+                </textarea>
+            </state>
+            <state name="selectedinactive" from="active" >
+               <shape name="selectbar" from="baseselectbar_selectedinactive">
+                    <area>0,0,100%,45</area>
+<!--                     <line color="#00FF00" alpha="100" width="1" /> -->
+<!--                     <cornerradius>4</cornerradius> -->
+<!-- 
+                    <type>box</type>
+                    <fill color="#0096ff" alpha="96" />
+                    <alpha>255</alpha>
+ -->
+                </shape>
+                <textarea name="buttontext">
+                    <area>8,0,100%-8,45</area>
+                    <font>basesmall_normal_selected_inactive</font>
+                    <font state="disabled">basesmall_disabled_selected</font>
+                    <font state="error">basesmall_error_selected</font>
+                    <font state="warning">basesmall_warning_selected</font>
+                    <font state="normal">basesmall_normal_selected_inactive</font>
+                    <font state="running">basesmall_running_selected</font>
+                    <align>vcenter</align>
+                </textarea>
+            </state>
+        </statetype>
+        <scrollbar name="scrollbar" from="basevertscrollbar">
+            <area>100%-8,0,8,100%</area>
+        </scrollbar>
+<!-- 
+        <statetype name="upscrollarrow">
+            <area>100%-18,0,18,12</area>
+<!~~ 
+            <state type="off">
+                <imagetype name="upon">
+                    <filename>lb-uparrow-reg.png</filename>
+                </imagetype>
+            </state>
+ ~~>
+            <state type="full">
+                <imagetype name="upoff">
+                    <filename>uiicons/scrollarrow-up.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+ -->
+<!-- 
+        <statetype name="downscrollarrow">
+            <area>100%-18,100%-12,18,12</area>
+<!~~ 
+            <state type="off">
+                <imagetype name="dnon">
+                    <filename>lb-dnarrow-reg.png</filename>
+                </imagetype>
+            </state>
+ ~~>
+            <state type="full">
+                <imagetype name="dnoff">
+                    <filename>uiicons/scrollarrow-down.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+ -->
+    </buttonlist>
+
+    <!-- Base definition of a button -->
+    <button name="basebutton">
+        <area>0,0,231,66</area>
+        <statetype name="buttonstate">
+            <area>0,0,100%,100%</area>
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="basewidgetshape" />
+                <textarea name="text" >
+                    <area>6,3,100%-6,100%-3</area>
+                    <align>allcenter</align>
+                    <font>basemedium_normal_button</font>
+                    <font state="selected">basemediumblack</font>
+                    <font state="disabled">basemedium_disabled_button</font>
+                </textarea>
+            </state>
+            <state name="selected" from="active">
+                <shape name="background" from="baseselectedwidgetshape" />
+                <textarea name="text">
+                    <scroll direction="horizontal" startdelay="1.25" returndelay="1.25" />
+                </textarea>
+            </state>
+            <state name="disabled" from="active">
+                <shape name="background" from="basedisabledwidgetshape" />
+            </state>
+            <state name="pushed" from="active">
+                <textarea name="text" >
+                    <area>6,6,100%-6,100%</area>
+                </textarea>
+            </state>
+        </statetype>
+    </button>
+
+    <!-- Base definition of a wide button -->
+    <button name="basewidebutton" from="basebutton">
+        <area>0,0,436,66</area>
+    </button>
+
+    <!-- Base definition of a wider button -->
+    <button name="basewiderbutton" from="basebutton">
+        <area>0,0,564,66</area>
+    </button>
+
+    <!-- Base definition of a very wide button -->
+    <button name="baseverywidebutton" from="basebutton">
+        <area>0,0,1044,66</area>
+    </button>
+
+    <button name="basehalfverywidebutton" from="basebutton">
+        <area>0,0,518,66</area>
+    </button>
+
+    <!-- Base definition of 'search' button, those little search launch buttons
+         which appear next to some text input fields in forms -->
+    <button name="basesearchbutton" from="basebutton">
+        <area>0,0,48,48</area>
+    </button>
+
+    <!-- Base definition of checkbox -->
+    <checkbox name="basecheckbox">
+        <area>0,0,66,66</area>
+        <statetype name="background">
+            <area>0,0,100%,100%</area>
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="basewidgetshape" />
+                <textarea name="buttontext">
+                    <area>0,0,100%,100%</area>
+                    <font>basemedium</font>
+                    <align>allcenter</align>
+                </textarea>
+            </state>
+            <state name="selected" from="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="baseselectedwidgetshape" />
+                <textarea name="buttontext">
+                    <font>basemediumblack</font>
+                </textarea>
+            </state>
+            <state name="disabled" />
+        </statetype>
+        <statetype name="checkstate">
+            <position>10,10</position>
+            <state type="off">
+                <imagetype name="mark">
+                    <area>0,0,46,46</area>
+                    <filename>menuicons/anita-empty.png</filename>
+                </imagetype>
+            </state>
+            <state type="half">
+                <imagetype name="background">
+                    <area>0,0,46,46</area>
+                    <filename>menuicons/anita-half.png</filename>
+                </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="mark">
+                    <area>0,0,46,46</area>
+                    <filename>menuicons/anita-on.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </checkbox>
+    
+    <checkbox name="baseverywidecheckbox" from="basecheckbox">
+        <area>0,0,1044,66</area>
+    </checkbox>
+
+    <checkbox name="baseverywidecheckbox_withlabel" from="basecheckbox">
+        <area>0,0,1044,66</area>
+    </checkbox>
+
+
+    <!-- Base definition of a spinbox -->
+    <spinbox name="basespinbox">
+        <area>0,0,200,66</area>
+        <layout>horizontal</layout>
+        <wrapstyle>selection</wrapstyle>
+        <statetype name="buttonitem">
+            <area>0,0,100%,100%</area>
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="basewidgetshape" />
+                <textarea name="buttontext">
+                    <area>64,0,-64,100%-2</area>
+                    <font>basemedium</font>
+                    <cutdown>yes</cutdown>
+                    <align>hcenter,vcenter</align>
+                </textarea>
+            </state>
+            <state name="selectedactive" from="active">
+                <shape name="background" from="baseselectedwidgetshape" />
+                <textarea name="buttontext">
+                    <font>basemediumblack</font>
+                    <scroll direction="horizontal" startdelay="1.25" returndelay="1.25" />
+                </textarea>
+            </state>
+            <state name="selectedinactive" from="active" />
+        </statetype>
+        <statetype name="upscrollarrow">
+            <position>0,1</position>
+            <state type="off">
+                <imagetype name="upon">
+                    <area>0,0,64,64</area>
+                    <filename>ui/selector-left.png</filename>
+                    <alpha>128</alpha>
+                </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                    <area>0,0,64,64</area>
+                    <filename>ui/selector-left.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <position>100%-64,1</position>
+            <state type="off">
+                <imagetype name="upon">
+                    <area>0,0,64,64</area>
+                    <filename>ui/selector-right.png</filename>
+                    <alpha>128</alpha>
+                </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                    <area>0,0,64,64</area>
+                    <filename>ui/selector-right.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </spinbox>
+
+    <!-- Base definition of a spinbox with centered strings -->
+    <spinbox name="base_centered_spinbox" from="basespinbox">
+<!-- 
+        <area>0,0,200,66</area>
+        <layout>horizontal</layout>
+        <statetype name="buttonitem">
+            <state name="active">
+                <shape name="background" from="basewidgetshape" />
+                <textarea name="buttontext">
+                    <font>basesmall</font>
+                    <cutdown>no</cutdown>
+                    <align>allcenter</align>
+                </textarea>
+            </state>
+            <state name="selectedactive" from="active">
+                <shape name="background" from="baseselectedwidgetshape" />
+            </state>
+            <state name="selectedinactive" from="active" />
+        </statetype>
+ -->
+    </spinbox>
+
+    <!-- Base definition of a wide spinbox (room for strings) -->
+    <spinbox name="basewidespinbox" from="basespinbox">
+        <area>0,0,1044,66</area>
+    </spinbox>
+
+    <!-- Base definition of a list in 'selector' configuration -->
+    <buttonlist name="baseselector">
+        <area>0,0,330,66</area>
+        <layout>horizontal</layout>
+        <wrapstyle>selection</wrapstyle>
+        <buttonarea>0,0,100%,100%</buttonarea>
+        <statetype name="buttonitem">
+            <area>0,0,100%,100%</area>
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="basewidgetshape" />
+                <textarea name="buttontext">
+                    <area>64,0,-64,100%-2</area>
+                    <font>basemedium</font>
+                    <cutdown>yes</cutdown>
+                    <align>hcenter,vcenter</align>
+                </textarea>
+            </state>
+            <state name="selectedinactive" from="active" />
+            <state name="selectedactive" from="active">
+                <shape name="background" from="baseselectedwidgetshape" />
+                <textarea name="buttontext">
+                    <font>basemediumblack</font>
+                    <scroll direction="horizontal" startdelay="1.25" returndelay="1.25" />
+                </textarea>
+            </state>
+        </statetype>
+        <statetype name="upscrollarrow">
+            <position>0,1</position>
+            <state type="off">
+                <imagetype name="upon">
+                    <area>0,0,64,64</area>
+                    <filename>ui/selector-left.png</filename>
+                    <alpha>128</alpha>
+                </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                    <area>0,0,64,64</area>
+                    <filename>ui/selector-left.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+        <statetype name="downscrollarrow">
+            <position>100%-64,1</position>
+            <state type="off">
+                <imagetype name="upon">
+                    <area>0,0,64,64</area>
+                    <filename>ui/selector-right.png</filename>
+                    <alpha>128</alpha>
+                </imagetype>
+            </state>
+            <state type="full">
+                <imagetype name="upoff">
+                    <area>0,0,64,64</area>
+                    <filename>ui/selector-right.png</filename>
+                </imagetype>
+            </state>
+        </statetype>
+    </buttonlist>
+
+    <!-- Base definition of a list in medium 'selector' configuration -->
+    <buttonlist name="basemediumselector" from="baseselector">
+        <area>0,0,564,66</area>
+    </buttonlist>
+
+    <!-- Base definition of a list in wide 'selector' configuration -->
+    <buttonlist name="basewideselector" from="baseselector">
+        <area>0,0,1044,66</area>
+    </buttonlist>
+
+    <buttonlist name="baseverywideselector" from="baseselector">
+        <area>0,0,1065,66</area>
+    </buttonlist>
+
+    <!-- Base definition of a textarea -->
+    <textarea name="basetextarea">
+        <area>0,0,0,0</area>
+        <font>basesmall</font>
+        <multiline>no</multiline>
+        <align>left</align>
+    </textarea>
+
+    <textarea name="baseverywidelabel" from="basetextarea">
+        <area>0,0,1044,66</area>
+        <font>basemedium</font>
+        <multiline>no</multiline>
+        <align>allcenter</align>
+    </textarea>
+
+    <!-- Base definition of a textedit -->
+    <textedit name="basetextedit">
+        <area>0,0,564,66</area>
+        <statetype name="background">
+            <area>0,0,100%,100%</area>
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="basewidgetshape" />
+                <shape name="textbackground">
+                    <area>10,10,-10,-10</area>
+                    <type>box</type>
+                    <fill color="#FFFFFF" alpha="192" />
+                </shape>
+            </state>
+            <state name="selected" from="active">
+                <shape name="background" from="baseselectedwidgetshape" />
+                <shape name="textbackground">
+                    <fill color="#FFFFFF" alpha="232" />
+                </shape>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>ui/cursor.png</filename>
+        </imagetype>
+        <textarea name="text">
+            <area>13,13,-13,-13</area>
+            <font>basesmall_textedit</font>
+            <align>vcenter</align>
+        </textarea>
+    </textedit>
+
+    <textedit name="basetextedit_with50pclabel" from="basetextedit">
+        <area>0,0,564,66</area>
+        <statetype name="background">
+            <area>0,0,100%,100%</area>
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="basewidgetshape" />
+                <textarea name="label">
+                    <area>0,0,50%,100%</area>
+                    <font>basemedium</font>
+                    <align>allcenter</align>
+                </textarea>
+                <shape name="textbackground">
+                    <area>50%+10,10,-10,-10</area>
+                    <type>box</type>
+                    <fill color="#FFFFFF" alpha="192" />
+                </shape>
+            </state>
+            <state name="selected" from="active">
+                <shape name="background" from="baseselectedwidgetshape" />
+                <textarea name="label">
+                    <font>basemediumblack</font>
+                    <scroll direction="horizontal" startdelay="1.25" returndelay="1.25" />
+                </textarea>
+                <shape name="textbackground">
+                    <fill color="#FFFFFF" alpha="232" />
+                </shape>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>ui/cursor.png</filename>
+        </imagetype>
+        <textarea name="text">
+            <area>295,13,-13,-13</area>
+            <font>basesmall_textedit</font>
+            <align>vcenter</align>
+        </textarea>
+    </textedit>
+
+    <textedit name="baseverywidetextedit_with50pclabel" from="basetextedit_with50pclabel">
+        <area>0,0,1044,66</area>
+        <textarea name="text">
+            <area>535,13,-13,-13</area>
+        </textarea>
+    </textedit>
+
+    <textedit name="basetextedit_with34pclabel" from="basetextedit">
+        <area>0,0,564,66</area>
+        <statetype name="background">
+            <area>0,0,100%,100%</area>
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="basewidgetshape" />
+                <textarea name="label">
+                    <area>0,0,192,100%</area>
+                    <font>basemedium</font>
+                    <align>allcenter</align>
+                </textarea>
+                <shape name="textbackground">
+                    <area>202,10,-10,-10</area>
+                    <type>box</type>
+                    <fill color="#FFFFFF" alpha="192" />
+                </shape>
+            </state>
+            <state name="selected" from="active">
+                <shape name="background" from="baseselectedwidgetshape" />
+                <textarea name="label">
+                    <font>basemediumblack</font>
+                    <scroll direction="horizontal" startdelay="1.25" returndelay="1.25" />
+                </textarea>
+                <shape name="textbackground">
+                    <fill color="#FFFFFF" alpha="232" />
+                </shape>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>ui/cursor.png</filename>
+        </imagetype>
+        <textarea name="text">
+            <area>205,13,-13,-13</area>
+            <font>basesmall_textedit</font>
+            <align>vcenter</align>
+        </textarea>
+    </textedit>
+
+    <textedit name="baseverywidetextedit_with34pclabel" from="basetextedit_with34pclabel">
+        <area>0,0,1044,66</area>
+        <statetype name="background">
+            <area>0,0,100%,100%</area>
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="basewidgetshape" />
+                <textarea name="label">
+                    <area>0,0,355,100%</area>
+                    <font>basemedium</font>
+                    <align>allcenter</align>
+                </textarea>
+                <shape name="textbackground">
+                    <area>365,10,-10,-10</area>
+                    <type>box</type>
+                    <fill color="#FFFFFF" alpha="192" />
+                </shape>
+            </state>
+            <state name="selected" from="active">
+                <shape name="background" from="baseselectedwidgetshape" />
+                <textarea name="label">
+                    <font>basemediumblack</font>
+                    <scroll direction="horizontal" startdelay="1.25" returndelay="1.25" />
+                </textarea>
+                <shape name="textbackground">
+                    <fill color="#FFFFFF" alpha="232" />
+                </shape>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>ui/cursor.png</filename>
+        </imagetype>
+        <textarea name="text">
+            <area>368,13,-13,-13</area>
+            <font>basesmall_textedit</font>
+            <align>vcenter</align>
+        </textarea>
+    </textedit>
+
+    <!-- Base definition of a multi-line textedit -->
+    <textedit name="basemultilinetextedit">
+        <area>0,0,564,165</area>
+        <statetype name="background">
+            <area>0,0,100%,100%</area>
+            <state name="active">
+                <area>0,0,100%,100%</area>
+                <shape name="background" from="basewidgetshape" />
+                <shape name="textbackground">
+                    <area>15,15,-15,-15</area>
+                    <type>box</type>
+                    <fill color="#FFFFFF" alpha="200" />
+                </shape>
+            </state>
+            <state name="selected" from="active">
+                <shape name="background" from="baseselectedwidgetshape" />
+                <shape name="textbackground">
+                    <fill color="#FFFFFF" alpha="255" />
+                </shape>
+            </state>
+            <state name="inactive" from="active" />
+        </statetype>
+        <imagetype name="cursor">
+            <filename>ui/cursor.png</filename>
+        </imagetype>
+        <textarea name="text">
+            <area>18,18,-18,-18</area>
+            <font>basesmall_textedit</font>
+            <multiline>yes</multiline>
+        </textarea>
+    </textedit>
+
+    <!-- Base definition of a progressbar -->
+    <progressbar name="baseprogressbar">
+        <area>0,0,804,57</area>
+        <layout>horizontal</layout>
+        <style>reveal</style>
+        <imagetype name="background">
+            <area>0,0,100%,100%</area>
+            <filename>progressbar_background.png</filename>
+        </imagetype>
+        <imagetype name="progressimage">
+            <area>0,0,100%,100%</area>
+            <filename>progressbar_fill.png</filename>
+        </imagetype>
+    </progressbar>
+
+    <!-- Base definition of a webbrowser -->
+    <webbrowser name="basewebbrowser">
+        <area>30,30,1860,750</area>
+        <browserarea>0,0,100%-16,100%-16</browserarea>
+        <zoom>1.0</zoom>
+        <scrollduration>500</scrollduration>
+        <scrollbar name="vertscrollbar" from="basevertscrollbar">
+            <area>100%-16,0,16,100%-16</area>
+        </scrollbar>
+        <scrollbar name="horizscrollbar" from="basehorizscrollbar">
+            <area>0,100%-16,100%-16,16</area>
+        </scrollbar>
+    </webbrowser>
+
+    <!-- Base definition of a shape used as a background on many screens -->
+    <shape name="basebackground">
+        <area>0,0,0,0</area>
+        <type>roundbox</type>
+        <fill color="#0c58a7" alpha="120" />
+        <line color="#FFFFFF" alpha="255" width="2" />
+        <cornerradius>12</cornerradius>
+    </shape>
+
+
+    <!-- a program information group used on a few schedule editor screens -->
+    <group name="baseprogramdetailsgroup">
+        <area>0,0,1044,336</area>
+
+        <shape name="details_background">
+            <area>0,0,100%,100%</area>
+            <type>box</type>
+            <fill color="#ffffff" alpha="32" />
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>8,4,100%-4,69</area>
+            <font>baselarge</font>
+        </textarea>
+
+        <textarea name="description" from="basetextarea">
+            <area>8,62,100%-4,100%-84</area>
+            <multiline>yes</multiline>
+            <scroll direction="vertical" />
+<!--             <template>%"|SUBTITLE|" %%LONGREPEAT%%(|STARS|) %%DESCRIPTION%</template> -->
+            <template>%YEARSTARS| %%"|SUBTITLE|" %%(|S00E00|) %%DESCRIPTION%% (|category|)%% |LONGREPEAT%</template>
+        </textarea>
+
+        <textarea name="template" from="basetextarea">
+            <area>8,100%-92,100%-8,42</area>
+            <align>hcenter,top</align>
+            <template>%Using |TEMPLATE| Template%</template>
+        </textarea>
+
+        <textarea name="timedate" from="basetextarea">
+            <area>8,100%-42,100%-8,42</area>
+        </textarea>
+
+        <textarea name="channel" from="basetextarea">
+            <area>8,100%-42,100%-8,42</area>
+            <align>right</align>
+        </textarea>
+
+    </group>
+    
+    <!-- a title bar -->
+    <group name="basetitlebar">
+        <area>0,0,1920,58</area>
+        
+<!-- 
+        <animation trigger="AboutToShow">
+            <section duration="300">
+                <position start="-1,-116" end="-1,-1" />
+            </section>
+        </animation>
+        
+        <animation trigger="AboutToHide">
+            <section duration="225">
+                <position start="-1,-1" end="-1,-116" />
+            </section>
+        </animation>
+ -->
+        
+        <shape name="basetb-bg">
+            <area>0,0,1920,58</area>
+            <type>box</type>
+            <fill color="#ffffff" alpha="48" />
+            <alpha>0</alpha>
+        </shape>
+        
+        <textarea name="basetb-left">
+            <area>12,0,495,58</area>
+            <align>vcenter</align>
+            <font>basesmall</font>
+        </textarea>
+        
+        <clock name="basetb-clock">
+            <area>1275,0,615,58</area>
+            <area>12,0,495,58</area>
+            <font>basesmall</font>
+            <align>vcenter,left</align>
+            <template>%DATE%, %TIME%</template>
+        </clock>
+        
+        <textarea name="basetb-title" from="basetextarea">
+            <area>0,0,1920,58</area>
+            <font>basemedium_title</font>
+            <align>allcenter</align>
+        </textarea>
+        
+    </group>
+    
+    <group name="basetitleicons_recordings">
+        <area>1370,0,640,60</area>
+        <alpha>192</alpha>
+        
+        <imagetype name="titleicons_highlight">
+<!--             <area>2,0,150,60</area> -->
+            <area>2,0,263,60</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>ui/titleicons_highlight.png</filename>
+<!--             <filename>ui/selectbar_titleicons_recordings.png</filename> -->
+            <alpha>0</alpha>
+        </imagetype>
+        
+        <textarea name="titleicons_icon_recordings_label">
+            <area>7,0,197,56</area>
+            <font>basemedium</font>
+            <align>right,vcenter</align>
+            <value>Recordings</value>
+        </textarea>
+        <imagetype name="titleicons_icon_recordings">
+            <area>211,6,48,48</area>
+            <filename>menuicons/watch.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator">
+            <area>267,0,2,60</area>
+            <filename>ui/titleicons_separator.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_schedule">
+            <area>279,6,48,48</area>
+            <filename>menuicons/plus.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator2" from="titleicons_separator">
+            <position>337,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_status">
+            <area>349,6,48,48</area>
+            <filename>menuicons/bulb-2.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator3" from="titleicons_separator">
+            <position>407,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_tvsettings">
+            <area>419,6,48,48</area>
+            <filename>menuicons/settings-4.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator4" from="titleicons_separator">
+            <position>477,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_more">
+            <area>489,6,48,48</area>
+            <filename>menuicons/ellipsis.png</filename>
+        </imagetype>
+        
+    </group>
+    
+    <group name="basetitleicons_schedule">
+        <area>1370,0,640,60</area>
+        <alpha>192</alpha>
+        
+        <imagetype name="titleicons_highlight">
+            <area>70,0,263,60</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>ui/titleicons_highlight.png</filename>
+            <alpha>0</alpha>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_recordings">
+            <area>2,6,48,48</area>
+            <filename>menuicons/watch.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator">
+            <area>60,0,2,60</area>
+            <filename>ui/titleicons_separator.png</filename>
+        </imagetype>
+        
+        <textarea name="titleicons_icon_schedule_label">
+            <area>70,0,197,56</area>
+            <font>basemedium</font>
+            <align>right,vcenter</align>
+            <value>Schedule</value>
+        </textarea>
+        <imagetype name="titleicons_icon_schedule">
+            <area>279,6,48,48</area>
+            <filename>menuicons/plus.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator2" from="titleicons_separator">
+            <position>337,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_status">
+            <area>349,6,48,48</area>
+            <filename>menuicons/bulb-2.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator3" from="titleicons_separator">
+            <position>407,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_tvsettings">
+            <area>419,6,48,48</area>
+            <filename>menuicons/settings-4.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator4" from="titleicons_separator">
+            <position>477,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_more">
+            <area>489,6,48,48</area>
+            <filename>menuicons/ellipsis.png</filename>
+        </imagetype>
+        
+    </group>
+    
+    <group name="basetitleicons_status">
+        <area>1370,0,640,60</area>
+        <alpha>192</alpha>
+        
+        <imagetype name="titleicons_highlight">
+            <area>142,0,263,60</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>ui/titleicons_highlight.png</filename>
+            <alpha>0</alpha>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_recordings">
+            <area>2,6,48,48</area>
+            <filename>menuicons/watch.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator">
+            <area>60,0,2,60</area>
+            <filename>ui/titleicons_separator.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_schedule">
+            <area>72,6,48,48</area>
+            <filename>menuicons/plus.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator2" from="titleicons_separator">
+            <position>130,0</position>
+        </imagetype>
+        
+        <textarea name="titleicons_icon_status_label">
+            <area>142,0,197,56</area>
+            <font>basemedium</font>
+            <align>right,vcenter</align>
+            <value>Status</value>
+        </textarea>
+        <imagetype name="titleicons_icon_status">
+            <area>349,6,48,48</area>
+            <filename>menuicons/bulb-2.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator3" from="titleicons_separator">
+            <position>407,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_tvsettings">
+            <area>419,6,48,48</area>
+            <filename>menuicons/settings-4.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator4" from="titleicons_separator">
+            <position>477,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_more">
+            <area>489,6,48,48</area>
+            <filename>menuicons/ellipsis.png</filename>
+        </imagetype>
+        
+    </group>
+    
+    <group name="basetitleicons_tvsettings">
+        <area>1370,0,640,60</area>
+        <alpha>192</alpha>
+        
+        <imagetype name="titleicons_highlight">
+            <area>206,0,263,60</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>ui/titleicons_highlight.png</filename>
+            <alpha>0</alpha>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_recordings">
+            <area>2,6,48,48</area>
+            <filename>menuicons/watch.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator">
+            <area>60,0,2,60</area>
+            <filename>ui/titleicons_separator.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_schedule">
+            <area>72,6,48,48</area>
+            <filename>menuicons/plus.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator2" from="titleicons_separator">
+            <position>130,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_status">
+            <area>142,6,48,48</area>
+            <filename>menuicons/bulb-2.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator3" from="titleicons_separator">
+            <position>200,0</position>
+        </imagetype>
+        
+        <textarea name="titleicons_icon_tvsettings_label">
+            <area>210,0,197,56</area>
+            <font>basemedium</font>
+            <align>right,vcenter</align>
+            <value>TV settings</value>
+        </textarea>
+        <imagetype name="titleicons_icon_tvsettings">
+            <area>419,6,48,48</area>
+            <filename>menuicons/settings-4.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator4" from="titleicons_separator">
+            <position>477,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_more">
+            <area>489,6,48,48</area>
+            <filename>menuicons/ellipsis.png</filename>
+        </imagetype>
+        
+    </group>
+    
+    <group name="basetitleicons_more">
+        <area>1370,0,640,60</area>
+        <alpha>192</alpha>
+        
+        <imagetype name="titleicons_highlight">
+            <area>282,0,263,60</area>
+            <preserveaspect>no</preserveaspect>
+            <filename>ui/titleicons_highlight.png</filename>
+            <alpha>0</alpha>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_recordings">
+            <area>2,6,48,48</area>
+            <filename>menuicons/watch.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator">
+            <area>60,0,2,60</area>
+            <filename>ui/titleicons_separator.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_schedule">
+            <area>72,6,48,48</area>
+            <filename>menuicons/plus.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator2" from="titleicons_separator">
+            <position>130,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_status">
+            <area>142,6,48,48</area>
+            <filename>menuicons/bulb-2.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator3" from="titleicons_separator">
+            <position>200,0</position>
+        </imagetype>
+        
+        <imagetype name="titleicons_icon_tvsettings">
+            <area>212,6,48,48</area>
+            <filename>menuicons/settings-4.png</filename>
+        </imagetype>
+        
+        <imagetype name="titleicons_separator4" from="titleicons_separator">
+            <position>270,0</position>
+        </imagetype>
+        
+        <textarea name="titleicons_icon_more_label">
+            <area>282,0,197,56</area>
+            <font>basemedium</font>
+            <align>right,vcenter</align>
+            <value>More</value>
+        </textarea>
+        <imagetype name="titleicons_icon_more">
+            <area>489,6,48,48</area>
+            <filename>menuicons/ellipsis.png</filename>
+        </imagetype>
+        
+    </group>
+    
+    <!-- a fastext colour button bar -->
+    <group name="basecolourbar">
+        <area>0,1020,1920,58</area>
+<!--         <alpha>0</alpha> -->
+        
+<!-- 
+        <animation trigger="AboutToShow">
+            <section duration="300">
+                <position start="-1,1196" end="-1,-1" />
+            </section>
+        </animation>
+        
+        <animation trigger="AboutToHide">
+            <section duration="225">
+                <position start="-1,-1" end="-1,1196" />
+            </section>
+        </animation>
+ -->
+        
+        <shape name="basecolourbarbg">
+            <area>0,0,1920,58</area>
+            <type>box</type>
+            <fill color="#ffffff" alpha="64" />
+            <alpha>0</alpha>
+        </shape>
+        
+        
+        <group name="bcb-r">
+            <area>270,0,300,58</area>
+            <alpha>0</alpha>
+            
+            <shape name="bcb-r-bg">
+                <area>0,0,300,58</area>
+                <type>box</type>
+                <fill color="#000000" alpha="96" />
+                <alpha>0</alpha>
+            </shape>
+        
+            <imagetype name="bcb-r-icon">
+                <area>246,6,48,48</area>
+                <filename>uiicons/colourbutton-red.png</filename>
+<!--                 <alpha>192</alpha> -->
+            </imagetype>
+        
+            <textarea name="bcb-r-label" from="basetextarea">
+                <area>0,0,240,48</area>
+                <value>red button</value>
+                <align>right,bottom</align>
+            </textarea>
+        </group>
+        
+        <group name="bcb-g">
+            <area>630,0,300,58</area>
+            <alpha>0</alpha>
+            
+            <shape name="bcb-g-bg">
+                <area>0,0,300,58</area>
+                <type>box</type>
+                <fill color="#000000" alpha="96" />
+                <alpha>0</alpha>
+            </shape>
+        
+            <imagetype name="bcb-g-icon">
+                <area>246,6,48,48</area>
+                <filename>uiicons/colourbutton-green.png</filename>
+<!--                 <alpha>192</alpha> -->
+            </imagetype>
+        
+            <textarea name="bcb-g-label" from="basetextarea">
+                <area>0,0,240,48</area>
+                <value>green button</value>
+                <align>right,bottom</align>
+            </textarea>
+        </group>
+        
+        <group name="bcb-y">
+            <area>990,0,300,58</area>
+            <alpha>0</alpha>
+            
+            <shape name="bcb-y-bg">
+                <area>0,0,300,58</area>
+                <type>box</type>
+                <fill color="#000000" alpha="96" />
+                <alpha>0</alpha>
+            </shape>
+        
+            <imagetype name="bcb-y-icon">
+                <area>246,6,48,48</area>
+                <filename>uiicons/colourbutton-yellow.png</filename>
+<!--                 <alpha>255</alpha> -->
+            </imagetype>
+        
+            <textarea name="bcb-y-label" from="basetextarea">
+                <area>0,0,240,48</area>
+                <value>delete</value>
+                <align>right,bottom</align>
+            </textarea>
+        </group>
+        
+        <group name="bcb-b">
+            <area>1350,0,300,58</area>
+            <!-- a popup menu is available nearly everywhere -->
+            <alpha>255</alpha>
+            
+            <shape name="bcb-b-bg">
+                <area>0,0,300,58</area>
+                <type>box</type>
+                <fill color="#000000" alpha="96" />
+                <alpha>0</alpha>
+            </shape>
+        
+            <imagetype name="bcb-b-icon">
+                <area>246,6,48,48</area>
+                <filename>uiicons/colourbutton-blue.png</filename>
+<!--                 <alpha>255</alpha> -->
+            </imagetype>
+        
+            <textarea name="bcb-b-label" from="basetextarea">
+                <area>0,0,240,48</area>
+                <value>menu</value>
+                <align>right,bottom</align>
+            </textarea>
+        </group>
+    </group>
+
+    <!-- Popup Dialogue Box -->
+    <window name="MythPopupBox">
+        <area>1195,301,669,720</area>
+        <area>1163,296,733,752</area>
+        <area>1187,296,733,752</area>
+<!--         <area>5,5,100%-10,100%-10</area> -->
+        
+<!-- 
+        <shape name="popupshade" from="basepopupshade">
+            <area>-796,-240,1200,700</area>
+            <fill color="#ff0000" alpha="1200" />
+        </shape>
+ -->
+
+        <animation trigger="AboutToShow">
+            <section>
+                <alpha start="0" end="255" easingcurve="OutQuart"/>
+<!--                 <zoom start="105" end="100" easingcurve="OutQuart"/> -->
+                <position start="1187,360" end="1187,296" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+        <animation trigger="AboutToHide">
+            <section>
+                <alpha start="255" end="0" easingcurve="OutQuart"/>
+<!--                 <zoom start="100" end="105" easingcurve="OutQuart"/> -->
+                <position start="1187,296" end="1187,360" easingcurve="OutQuart"/>
+            </section>
+        </animation>
+        
+        <imagetype name="backimg">
+            <area>0,0,100%,100%</area>
+            <filename>backdrops/popup.png</filename>
+        </imagetype>
+        
+<!-- 
+        <shape name="dbgarea">
+            <area>38,38,100%-38,202</area>
+            <fill color="#ff0000" alpha="128" />
+        </shape>
+ -->
+
+        <textarea name="messagearea" from="basetextarea">
+            <area>38,34,100%-38,202</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical" />
+        </textarea>
+
+<!-- 
+        <shape name="dbgarea2">
+            <area>38,266,100%-38,480</area>
+            <fill color="#ffffff" alpha="32" />
+        </shape>
+ -->
+
+        <buttonlist name="list" from="basebuttonlist">
+            <area>44,240,100%-44,468</area>
+            <drawfrombottom>no</drawfrombottom>
+            <spacing>8</spacing>
+            <showarrow>no</showarrow>
+            <wrapstyle>selection</wrapstyle>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <textarea name="buttontext">
+                        <area>0,0,100%,60</area>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="selectedinactive">
+                    <textarea name="buttontext">
+                        <area>0,0,100%,60</area>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="selectedactive">
+                    <textarea name="buttontext">
+                        <area>0,0,100%,60</area>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+    </window>
+
+    <!-- <!~~ Fullscreen Dialogue Box ~~> -->
+    <!-- large dialog box -->
+    <window name="MythDialogBox">
+        <area>-1,-1,1060,960</area>
+
+        <shape name="backimg" from="basepopupbackground">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+<!-- 
+        <shape name="background" from="basebackground">
+            <area>15,15,1890,1050</area>
+<!~~             <fill color="#0e58a7" alpha="255" /> ~~>
+            <fill color="#ff0000" alpha="255" />
+        </shape>
+ -->
+
+        <textarea name="title" from="basetextarea">
+            <area>8,8,100%-8,75</area>
+            <font>baselarge</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <textarea name="messagearea" from="basetextarea">
+            <area>8,75,100%-8,315</area>
+            <multiline>yes</multiline>
+            <font>basemedium</font>
+            <align>allcenter</align>
+        </textarea>
+
+        <buttonlist name="list" from="basebuttonlist">
+            <area>8,406,100%-8,546</area>
+<!--             <drawfrombottom>yes</drawfrombottom> -->
+            <showarrow>no</showarrow>
+            <wrapstyle>selection</wrapstyle>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <triggerevent context="Global" action="SELECT">RIGHT</triggerevent>
+            <statetype name="buttonitem">
+                <area>0,0,100%,66</area>
+                <state name="active">
+                    <area>0,0,100%,66</area>
+                    <textarea name="buttontext">
+                        <area>0,0,100%,100%</area>
+                        <font>basemedium</font>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="selectedinactive">
+                    <area>0,0,100%,66</area>
+                    <textarea name="buttontext">
+                        <area>0,0,100%,100%</area>
+                        <font>basemediumblack</font>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="selectedactive">
+                    <area>0,0,100%,66</area>
+                    <textarea name="buttontext">
+                        <area>0,0,100%,100%</area>
+                        <font>basemediumblack</font>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+    </window>
+
+    <window name="MythBusyDialog">
+<!--         <area>-1,-1,640,96</area> -->
+<!--         <area>-1,-1,2768,592</area> -->
+        <area>-1,-1,692,148</area>
+        
+        <animation trigger="AboutToShow">
+            <section duration="75">
+                <zoom start="90" end="100" />
+                <alpha start="0" end="232" />
+            </section>
+        </animation>
+        <animation trigger="AboutToHide">
+            <section duration="50">
+                <zoom start="100" end="90" />
+                <alpha start="232" end="0" />
+            </section>
+        </animation>
+        
+        <imagetype name="backimg">
+            <area>0,0,692,148</area>
+            <filename>backdrops/popup_busydialog.png</filename>
+        </imagetype>
+        
+        <group name="busygroup">
+            <area>26,26,640,96</area>
+            
+<!-- 
+            <shape name="backimgshape" from="basepopupbackground">
+                <area>0,0,100%,100%</area>
+            </shape>
+ -->
+    <!-- 
+            <imagetype name="animation">
+                <area>60,60,157,157</area>
+                <filepattern low="0" high="24">busyimages/%1.png</filepattern>
+                <delay>16</delay>
+            </imagetype>
+     -->
+            <imagetype name="spinner">
+                <animation trigger="AboutToShow">
+                    <section duration="1000">
+                        <angle start="0" end="360" looped="true" />
+                    </section>
+                </animation>
+                <area>16,16,64,64</area>
+                <filename>ui/spinner-2.png</filename>
+            </imagetype>
+            <textarea name="message" from="basetextarea">
+                <area>96,0,100%-16,96</area>
+                <align>left,vcenter</align>
+                <multiline>yes</multiline>
+            </textarea>
+            
+        </group>
+        
+    </window>
+
+    <window name="MythProgressDialog">
+        <area>-1,-1,882,255</area>
+        <shape name="backimg" from="basepopupbackground">
+            <area>0,0,100%,100%</area>
+        </shape>
+        <textarea name="message" from="basetextarea">
+            <area>30,30,822,90</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+        </textarea>
+        <progressbar name="progressbar" from="baseprogressbar">
+            <position>33,120</position>
+        </progressbar>
+        <textarea name="progresstext" from="basetextarea">
+            <area>45,195,300,45</area>
+            <align>left,top</align>
+            <value>0%</value>
+        </textarea>
+    </window>
+
+    <window name="MythConfirmationDialog">
+        <area>-1,-1,882,255</area>
+        <shape name="backimg" from="basepopupbackground">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="message" from="basetextarea">
+            <area>21,21,840,135</area>
+            <align>allcenter</align>
+            <multiline>yes</multiline>
+            <cutdown>no</cutdown>
+        </textarea>
+
+        <button name="cancel" from="basebutton">
+            <position>135,165</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok" from="basebutton">
+            <position>507,165</position>
+            <value>OK</value>
+        </button>
+    </window>
+
+    <window name="MythTextInputDialog">
+        <area>-1,-1,882,255</area>
+        <shape name="backimg" from="basepopupbackground">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="message" from="basetextarea">
+            <area>30,30,822,45</area>
+            <align>allcenter</align>
+        </textarea>
+
+        <textedit name="input" from="basetextedit">
+            <position>153,75</position>
+        </textedit>
+
+        <button name="ok" from="basebutton">
+            <position>165,165</position>
+            <value>OK</value>
+        </button>
+    </window>
+
+    <window name="MythSearchDialog">
+        <area>-1,-1,750,750</area>
+        <shape name="backimg" from="basepopupbackground">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>18,30,705,90</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+        </textarea>
+
+        <textedit name="input" from="basetextedit">
+            <position>87,126</position>
+        </textedit>
+
+        <buttonlist name="itemlist" from="basebuttonlist">
+            <area>18,225,705,405</area>
+            <showarrow>no</showarrow>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <textarea name="buttontext">
+                        <area>6,0,690,45</area>
+                    </textarea>
+                </state>
+                <state name="selectedinactive">
+                    <textarea name="buttontext">
+                        <area>6,0,690,45</area>
+                    </textarea>
+                </state>
+                <state name="selectedactive">
+                    <textarea name="buttontext">
+                        <area>6,0,690,45</area>
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <button name="cancel" from="basebutton">
+            <position>45,654</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok" from="basebutton">
+            <position>474,654</position>
+            <value>OK</value>
+        </button>
+
+    </window>
+
+        <!-- Popup search dialog used to search button lists -->
+    <window name="MythSearchListDialog">
+        <area>-1,-1,930,247</area>
+        <shape name="backimg" from="basepopupbackground">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>7,15,900,45</area>
+            <multiline>yes</multiline>
+            <align>allcenter</align>
+            <value>Search List</value>
+        </textarea>
+
+        <textedit name="searchedit" from="basetextedit">
+            <position>180,60</position>
+        </textedit>
+
+        <button name="prevbutton" from="basebutton">
+            <position>30,157</position>
+            <value>Previous</value>
+        </button>
+
+        <button name="nextbutton" from="basebutton">
+            <position>667,157</position>
+            <value>Next</value>
+        </button>
+
+        <statetype name="searchstate">
+            <area>315,180,300,45</area>
+            <state name="found">
+                <textarea name="statustext" from="basetextarea">
+                    <area>0,0,300,45</area>
+                    <align>allcenter</align>
+                    <font>basesmallgreen</font>
+                    <value>Found</value>
+                </textarea>
+            </state>
+            <state name="notfound">
+                <textarea name="statustext" from="basetextarea">
+                    <area>0,0,300,45</area>
+                    <align>allcenter</align>
+                    <font>basesmallred</font>
+                    <value>Not Found</value>
+                </textarea>
+            </state>
+        </statetype>
+    </window>
+
+    <window name="MythFileBrowser">
+        <area>-1,-1,1095,765</area>
+        <shape name="backimg" from="basepopupbackground">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textedit name="location" from="basetextedit">
+            <position>60,21</position>
+        </textedit>
+
+        <buttonlist name="filelist">
+            <area>6,105,750,660</area>
+            <layout>grid</layout>
+            <buttonarea>0,0,750,645</buttonarea>
+            <statetype name="buttonitem">
+                <area>0,0,249,159</area>
+                <state name="active">
+                    <area>0,0,249,159</area>
+                    <shape name="background" />
+                    <statetype name="nodetype">
+                        <state name="folder">
+                            <imagetype name="icon">
+                                <area>9,6,225,111</area>
+                                <filename>shared/directory.png</filename>
+                                <preserveaspect>yes</preserveaspect>
+                            </imagetype>
+                        </state>
+                        <state name="upfolder" from="folder">
+                            <imagetype name="icon">
+                                <filename>shared/updirectory.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="executable" from="folder">
+                            <imagetype name="icon">
+                                <filename>shared/executable.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="file" from="folder">
+                            <imagetype name="icon">
+                                <filename>shared/file.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+                    <imagetype name="buttonimage">
+                        <area>6,6,225,111</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="buttontext" from="basetextarea">
+                        <area>3,120,240,39</area>
+                        <align>allcenter</align>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="active" />
+                <state name="selectedactive" from="active">
+                    <shape name="background">
+                        <area>0,0,249,159</area>
+                        <fill style="gradient">
+                            <gradient start="#999999" end="#666666" alpha="220" />
+                        </fill>
+                    </shape>
+                </state>
+            </statetype>
+        </buttonlist>
+
+        <imagetype name="preview">
+            <area>765,189,300,345</area>
+            <preserveaspect>true</preserveaspect>
+        </imagetype>
+
+        <textarea name="info" from="basetextarea">
+            <area>780,534,270,39</area>
+            <align>allcenter</align>
+        </textarea>
+
+        <button name="back" from="basebutton">
+            <position>795,24</position>
+            <value>Up Level</value>
+        </button>
+
+        <button name="home" from="basebutton">
+            <position>795,105</position>
+            <value>Home</value>
+        </button>
+
+        <button name="cancel" from="basebutton">
+            <position>795,579</position>
+            <value>Cancel</value>
+        </button>
+
+        <button name="ok" from="basebutton">
+            <position>795,660</position>
+            <value>OK</value>
+        </button>
+
+    </window>
+
+    <window name="MythTimeInputDialog">
+        <area>-1,-1,580,330</area>
+
+        <shape name="backimg" from="basepopupbackground">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <textarea name="message" from="basetextarea">
+            <area>8,8,564,100</area>
+            <font>basemedium</font>
+            <align>allcenter</align>
+            <value>Select Time &amp; Date</value>
+            <multiline>true</multiline>
+            <cutdown>no</cutdown>
+            <scroll direction="vertical" />
+        </textarea>
+
+        <buttonlist name="dates" from="basemediumselector">
+            <position>8,116</position>
+        </buttonlist>
+
+        <buttonlist name="times" from="basemediumselector">
+            <position>8,182</position>
+        </buttonlist>
+
+        <button name="ok" from="basewiderbutton">
+            <position>8,256</position>
+            <value>OK</value>
+        </button>
+
+    </window>
+
+    <window name="videowindow">
+
+        <shape name="shape1">
+            <area>0,0,1920,1080</area>
+            <type>box</type>
+            <fill color="#000000" alpha="255" />
+        </shape>
+
+        <textarea name="title" from="basetextarea">
+            <area>750,504,420,75</area>
+            <font>baselarge</font>
+            <align>allcenter</align>
+            <value>Please Wait...</value>
+        </textarea>
+
+        <progressbar name="progress" from="baseprogressbar">
+            <position>558,637</position>
+        </progressbar>
+
+    </window>
+
+    <window name="backgroundwindow">
+        <shape name="blackdrop">
+            <area>0,0,1920,1080</area>
+            <fill color="#000000" alpha="255" />
+        </shape>
+        <imagetype name="backimg">
+            <area>0,0,1920,1080</area>
+            <!-- anita-backdrop --><filename>backdrops/anita.png</filename>
+<!--             <filename>backdrops/sj_lyrapixels1.png</filename> -->
+<!--             <filename>backdrops/sj_noisypixels1.png</filename> -->
+<!--             <alpha>48</alpha> -->
+        </imagetype>
+
+        <fontdef name="medium" face="Lato"><!-- anita-font-primary -->
+            <color>#FFFFFF</color>
+            <pixelsize>40</pixelsize>
+            <weight>bold</weight>
+        </fontdef>
+
+        <fontdef name="large" face="Lato"><!-- anita-font-primary -->
+             <color>#FFFFFF</color>
+             <pixelsize>42</pixelsize>
+             <weight>bold</weight>
+        </fontdef>
+
+        <fontdef name="clock" face="Lato"><!-- anita-font-primary -->
+             <color>#FFFFFF</color>
+             <pixelsize>40</pixelsize>
+             <weight>bold</weight>
+        </fontdef>
+    </window>
+
+    <window name="MythMetadataResults">
+        <area>-1,-1,1606,886</area>
+
+        <shape name="backimg" from="basepopupbackground">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <buttonlist name="results" from="basebuttonlist">
+            <area>8,8,1590,870</area>
+            <arrange>stack</arrange>
+            <wrapstyle>selection</wrapstyle>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,100%,150</area>
+                    <shape name="background">
+                        <area>0,0,100%,150</area>
+                    </shape>
+                    <shape name="imagebg">
+                        <area>0,0,360,150</area>
+                        <fill color="#000000" alpha="24" />
+                    </shape>
+                    <imagetype name="buttonimage">
+                        <area>0,0,360,150</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <area>0,0,0,0</area>
+                    </textarea>
+                    <textarea name="title">
+                        <area>368,15,100%-8,120</area>
+                        <align>left,vcenter</align>
+                        <font>baselarge</font>
+                        <template>%TITLE%% - |SUBTITLE%% (|YEAR|)%</template>
+                        <multiline>yes</multiline>
+                    </textarea>
+                </state>
+                <state name="selectedactive">
+                    <area>0,0,100%,270</area>
+
+                    <shape name="background">
+                        <area>0,0,100%,270</area>
+                    </shape>
+                    <shape name="imagebg">
+                        <area>0,0,360,270</area>
+                        <fill color="#000000" alpha="24" />
+                    </shape>
+                    <imagetype name="buttonimage">
+                        <area>0,0,360,270</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="buttontext">
+                        <area>0,0,0,0</area>
+                    </textarea>
+                    <textarea name="title">
+                        <area>368,3,100%-8,45</area>
+                        <align>left</align>
+                        <font>basemediumbold</font>
+                        <template>%TITLE%% - |SUBTITLE%% (|YEAR|)%</template>
+                        <multiline>no</multiline>
+                        <scroll direction="horizontal" />
+                    </textarea>
+                    <textarea name="description">
+                        <area>368,55,100%-8,100%-8</area>
+                        <align>left</align>
+                        <font>basesmall</font>
+                        <template>%DESCRIPTION%</template>
+                        <multiline>yes</multiline>
+                        <scroll direction="vertical" />
+                    </textarea>
+                </state>
+            </statetype>
+        </buttonlist>
+    </window>
+
+    <window name="MythArtworkResults">
+        <area>-1,-1,916,960</area>
+
+        <shape name="backimg" from="basepopupbackground_opaque">
+            <area>0,0,100%,100%</area>
+        </shape>
+
+        <buttonlist name="results">
+            <area>8,8,900,944</area>
+            <layout>vertical</layout>
+            <spacing>0</spacing>
+            <wrapstyle>selection</wrapstyle>
+            <buttonarea>0,0,100%,100%</buttonarea>
+            <triggerevent context="Global" action="ESCAPE">LEFT</triggerevent>
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,100%,236</area>
+                    <shape name="buttonbackground" from="baseselectbar_active">
+                        <area>0,0,100%,100%</area>
+                    </shape>
+                    <shape name="imagebg">
+                        <area>0,0,421,236</area>
+                        <fill color="#000000" alpha="24" />
+                    </shape>
+                    <imagetype name="buttonimage">
+                        <area>0,0,421,236</area>
+                        <preserveaspect>true</preserveaspect>
+                    </imagetype>
+                    <textarea name="resolution">
+                        <area>429,8,100%-8,100%-8</area>
+                        <font>basemedium</font>
+                        <cutdown>yes</cutdown>
+                        <multiline>yes</multiline>
+                        <align>left,vcenter</align>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <shape name="buttonbackground" from="baseselectbar_selectedactive">
+                        <area>0,0,100%,100%</area>
+                    </shape>
+                    <textarea name="resolution">
+                        <font>basemediumbold</font>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <shape name="buttonbackground">
+                        <fill style="gradient">
+                            <gradient start="#52CA38" end="#349838" alpha="100" />
+                        </fill>
+                    </shape>
+                    <textarea name="resolution">
+                        <font>basesmallpurple</font>
+                    </textarea>
+                </state>
+            </statetype>
+            <scrollbar name="scrollbar" from="basevertscrollbar">
+                <area>100%-8,0,8,100%</area>
+            </scrollbar>
+            <statetype name="upscrollarrow">
+                <position>100%-27,0</position>
+                <state type="off">
+                    <imagetype name="upon">
+                        <filename>lb-uparrow-reg.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="upoff">
+                        <filename>lb-uparrow-sel.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            <statetype name="downscrollarrow">
+                <position>100%-27,100%-18</position>
+                <state type="off">
+                    <imagetype name="dnon">
+                        <filename>lb-dnarrow-reg.png</filename>
+                    </imagetype>
+                </state>
+                <state type="full">
+                    <imagetype name="dnoff">
+                        <filename>lb-dnarrow-sel.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+        </buttonlist>
+    </window>
+
+</mythuitheme>

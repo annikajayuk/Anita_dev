@@ -1,0 +1,52 @@
+# Color of the background
+# str BackgroundColor=red
+# Color of lines, text, etc
+# str ForegroundColor=red
+
+str BackgroundPixmap=backdrops/anita-1080.png
+
+str ActiveForeground=white
+str ActiveButton=#555555
+str ActiveLight=#444444
+str ActiveMidlight=#333333
+str ActiveDark=#222222
+str ActiveMid=red
+str ActiveText=#dddddd
+str ActiveBrightText=red
+str ActiveButtonText=white
+str ActiveBase=#222222
+str ActiveBackground=black
+str ActiveShadow=#111111
+str ActiveHighlight=#988400
+str ActiveHighlightedText=red
+
+str InactiveForeground=red
+str InactiveButton=red
+str InactiveLight=red
+str InactiveMidlight=red
+str InactiveDark=red
+str InactiveMid=red
+str InactiveText=red
+str InactiveBrightText=red
+str InactiveButtonText=red
+str InactiveBase=red
+str InactiveBackground=red
+str InactiveShadow=red
+str InactiveHighlight=red
+str InactiveHighlightedText=red
+
+str DisabledForeground=#666666
+str DisabledButton=black
+str DisabledLight=black
+str DisabledMidlight=black
+str DisabledDark=black
+str DisabledMid=#666666
+str DisabledText=#666666
+str DisabledBrightText=red
+str DisabledButtonText=#666666
+str DisabledBase=black
+str DisabledBackground=red
+str DisabledShadow=black
+str DisabledHighlight=red
+str DisabledHighlightedText=red
+

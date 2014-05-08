@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythmenu name="SCHEDULE">
+
+    <button>
+        <type>TV_PROGRAM_GUIDE</type>
+        <text>Program Guide</text>
+        <description>choose programs from a grid-style list</description>
+        <action>TV_SCHEDULE</action>
+    </button>
+
+    <button>
+        <type>TV_PROGFIND</type>
+        <text>Program Finder</text>
+        <description>choose programs from an alphabetical index</description>
+        <action>TV_PROGFIND</action>
+    </button>
+
+    <button>
+        <type>TV_SEARCH_LISTINGS</type>
+        <text>Search Listings</text>
+        <description>find programs matching search words</description>
+        <action>MENU mainmenu/tv_search.xml</action>
+    </button>
+
+    <button>
+        <type>TV_CUSTOM_RECORD</type>
+        <text>Custom Record</text>
+        <description>use SQL to find programs</description>
+        <action>TV_CUSTOM_RECORD</action>
+    </button>
+
+    <button>
+        <type>TV_MANUAL_SCHEDULE</type>
+        <text>Manual Schedule</text>
+        <description>create a VCR-like recording rule</description>
+        <action>TV_MANUALSCHEDULE</action>
+    </button>
+
+    <button>
+        <type>TV_RECORDING_RULES</type>
+        <text>Recording Rules</text>
+        <description>edit or delete any recording rule</description>
+        <action>TV_MANAGE_RECORDING_RULES</action>
+    </button>
+    
+    <button>
+        <type>TV_PREVIOUS</type>
+        <text>Previously Recorded</text>
+        <description>see what you have recorded before</description>
+        <action>TV_PREVIOUS</action>
+    </button>
+
+    <button>
+        <type>TV_CONFLICTS</type>
+        <text>Upcoming Recordings</text>
+        <description>see what will be recorded next</description>
+        <action>TV_FIX_CONFLICTS</action>
+    </button>
+
+</mythmenu>

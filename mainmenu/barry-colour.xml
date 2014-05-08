@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythmenu name="ANITA_COLOUR">
+    
+    <button>
+        <type>ANITA_COLOUR_B</type>
+        <text>Aqua</text>
+        <description>The default.</description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh colour-blue reload</action>
+    </button>
+    
+    <button>
+        <type>ANITA_COLOUR_O</type>
+        <text>Tangerine</text>
+        <description>Anita’s favourite.</description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh colour-orange reload</action>
+    </button>
+    
+    <button>
+        <type>ANITA_COLOUR_P</type>
+        <text>Grape</text>
+        <description>Is there room in your life for a little purple?</description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh colour-purple reload</action>
+    </button>
+    
+    <button>
+        <type>ANITA_COLOUR_R</type>
+        <text>Cayenne</text>
+        <description>Be bold!</description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh colour-red reload</action>
+    </button>
+    
+</mythmenu>

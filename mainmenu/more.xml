@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythmenu name="MORE">
+
+    <button>
+        <type>SETUP</type>
+        <text>Setup</text>
+        <description>change settings for TV, Images, Music, Video, Weather, etc.</description>
+        <action>MENU mainmenu/main_settings.xml</action>
+        <password>SetupPinCode</password>
+    </button>
+
+    <button>
+        <type>RELOAD_THEME</type>
+        <text>Reload Theme</text>
+        <description>reload the current theme</description>
+        <action>EXEC bash ~/.mythtv/themes/Anita_dev/customise/customise.sh reload</action>
+    </button>
+
+    <button>
+        <type>TV_WATCH_TV</type>
+        <text>Live TV</text>
+        <description>watch live television</description>
+        <action>TV_WATCH_LIVE</action>
+    </button>
+
+    <button>
+        <type>MEDIA</type>
+        <text>Media</text>
+        <description>browse local media</description>
+        <action>MENU mainmenu/media.xml</action>
+    </button>
+
+    <button>
+        <type>INTERNET</type>
+        <text>Internet</text>
+        <description>use internet plugins</description>
+        <action>MENU mainmenu/internet.xml</action>
+    </button>
+
+    <button>
+        <type>STREAM</type>
+        <text>Play online streams</text>
+        <action>PLUGIN mythstream</action>
+        <depends>mythstream</depends>
+    </button>
+
+    <button>
+        <type>WEATHER</type>
+        <text>Weather Station</text>
+        <description>view weather statistics</description>
+        <action>PLUGIN mythwstation</action>
+        <depends>mythwstation</depends>
+    </button>
+
+    <button>
+        <type>RECIPE</type>
+        <text>Recipes</text>
+        <action>PLUGIN mythRecipe</action>
+        <depends>mythRecipe</depends>
+    </button>
+
+<!-- 
+    <button>
+        <type>ARCHIVE</type>
+        <text>Archive Files</text>
+        <description>Backup a program to DVD</description>
+        <action>PLUGIN mytharchive</action>
+        <depends>mytharchive</depends>
+    </button>
+ -->
+
+    <button>
+        <type>ZONEMINDER</type>
+        <text>ZoneMinder</text>
+        <description>view live and recorded home surveillance camera images</description>
+        <action>PLUGIN mythzoneminder</action>
+        <depends>mythzoneminder</depends>
+    </button>
+    
+    <button>
+        <type>CUSTOMISE_ANITA</type>
+        <text>Customise Anita</text>
+        <description>change Anita’s look.</description>
+        <action>MENU mainmenu/anita-customise.xml</action>
+    </button>
+    
+    <button>
+        <type>ABOUT_ANITA</type>
+        <text>About Anita</text>
+        <description>see information about Anita. The Anita menu themes are best used with “Anita”.</description>
+        <action>MENU mainmenu/anita-about.xml</action>
+    </button>
+    
+</mythmenu>

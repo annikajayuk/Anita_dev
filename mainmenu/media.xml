@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythmenu name="MEDIA">
+    
+    <button>
+        <type>MUSIC</type>
+        <text>Music</text>
+        <description>Play music files and internet radio streams</description>
+        <action>PLUGIN mythmusic</action>
+        <depends>mythmusic</depends>
+    </button>
+    
+    <button>
+        <type>VIDEO</type>
+        <text>Videos</text>
+        <description>Browse the video library</description>
+        <action>MENU mainmenu/videomenu.xml</action>
+    </button>
+    
+    <button>
+        <type>IMAGES</type>
+        <text>Images</text>
+        <action>PLUGIN mythgallery</action>
+        <description>Look at pictures</description>
+        <depends>mythgallery</depends>
+    </button>
+    
+    <button>
+        <type>GAME</type>
+        <text>Games</text>
+        <action>PLUGIN mythgame</action>
+        <description>Play games</description>
+        <depends>mythgame</depends>
+    </button>
+    
+</mythmenu>

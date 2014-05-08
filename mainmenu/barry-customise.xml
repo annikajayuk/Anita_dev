@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythmenu name="ANITA_CUSTOMISE">
+    
+    <button>
+        <type>ANITA_CUSTOMISE_COLOUR</type>
+        <text>Colour</text>
+        <description>Choose one. Then come back tomorrow and choose another.</description>
+        <action>MENU mainmenu/anita-colour.xml</action>
+    </button>
+    
+    <button>
+        <type>ANITA_CUSTOMISE_FONT</type>
+        <text>Font</text>
+        <description></description>
+        <action>MENU mainmenu/anita-font.xml</action>
+    </button>
+    
+    <button>
+        <type>ANITA_CUSTOMISE_BACKDROP</type>
+        <text>Backdrop</text>
+        <description></description>
+        <action>MENU mainmenu/anita-backdrop.xml</action>
+    </button>
+    
+    <button>
+        <type>ANITA_CUSTOMISE_COLOURBAR</type>
+        <text>Show/Hide Colour Bar</text>
+        <description>Don’t use it? Want it back?</description>
+        <action>MENU</action>
+    </button>
+    
+</mythmenu>

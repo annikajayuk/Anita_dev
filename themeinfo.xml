@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<themeinfo>
+    <!-- The Theme Name (Required) -->
+    <name>Anita dev</name>
+    
+    <!-- The Theme Types (Required) -->
+    <types>
+        <!-- Type. Legal Values are one or more of: UI, OSD and Menu -->
+        <type>UI</type>
+        <type>OSD</type>
+        <type>Menu</type>
+    </types>
+    
+    <!-- Aspect ratio of the theme. (Required)
+         Maybe be: 4:3, 5:4, 16:9 or 16:10 -->
+    <aspect>16:9</aspect>
+    
+    <!-- The base resolution of the theme before being scaled to the users
+         resolution (Required)
+         Usually 800x600 (4:3) or 1280x720 (16:9) -->
+    <baseres>1920x1080</baseres>
+    
+    <!-- Theme Author Details (Optional)-->
+    <author>
+        <!-- Your name -->
+        <name>Samuel Jacobs</name>
+        
+        <!-- Your Email Address -->
+        <email>samuel@ijacobs.co.uk</email>
+    </author>
+    
+    <!-- The Versioning Info (Required) -->
+    <version>
+        <major>0</major>
+        <minor>0</minor>
+        <revision>1</revision>
+    </version>
+    
+    <!-- Theme Details (Required) -->
+    <detail>
+        <!-- At least one thumbnail image named "preview" must be included
+             with the theme.
+             There is no limit to the number of thumbnails.
+             Each thumbnail must be given a different name -->
+        <thumbnail name="preview">themepreviews/preview.png</thumbnail>
+        <thumbnail name="mainmenu-schedule">themepreviews/mainmenu-schedule.png</thumbnail>
+        <thumbnail name="recordings-previewbanners">themepreviews/recordings-previewbanners.png</thumbnail>
+        <thumbnail name="recordings">themepreviews/recordings.png</thumbnail>
+        <thumbnail name="programguide">themepreviews/programmeguide.png</thumbnail>
+        <thumbnail name="programsearch">themepreviews/programmesearch.png</thumbnail>
+        <thumbnail name="status">themepreviews/status.png</thumbnail>
+        
+        <thumbnail name="about">themepreviews/about.png</thumbnail>
+        
+        <!-- A description of the theme, including general colours and
+             style. The description should include any details that
+             may help to locate your theme in a search. -->
+        <description>Aside from the wallpaper and icons, Anita has no images, letting your recordings’ artwork shine through!</description>
+        
+        <!-- Errata. A list of known faults, missing elements or unfinished
+             areas. e.g. "mythgallery not themed" -->
+        <errata>Anita currently supports only the main menu, watch recordings, programme grid and status screens. Work on theming all DVR screens progresses. Anita is derived from a 1280 x 720 theme, therefore unthemed screens look *bad*. Sorry.</errata>
+    </detail>
+</themeinfo>
