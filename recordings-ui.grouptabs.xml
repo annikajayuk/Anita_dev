@@ -534,7 +534,7 @@
                         <align>vcenter,left</align>
                         <cutdown>yes</cutdown>
 <!--                         <template>%TITLE| %%[|CATEGORY|]%% |YEAR%% |STARS%</template> -->
-                        <template>%YEAR| %%STARS| %%[|CATEGORY|]%% |TITLE%</template>
+                        <template>%TITLE%% |YEARSTARS%% ‹|CATEGORY|›%</template>
                     </textarea>
                     
                     <shape name="chanbg" from="titlebg">
@@ -738,7 +738,7 @@
                         <align>vcenter,left</align>
                         <cutdown>yes</cutdown>
 <!--                         <template>%TITLE| %%[|CATEGORY|]%% |YEAR%% |STARS%</template> -->
-                        <template>%YEAR| %%STARS| %%[|CATEGORY|]%% |TITLE%</template>
+                        <template>%TITLE%% |YEARSTARS%% ‹|CATEGORY|›%</template>
                     </textarea>
                     <textarea name="callsign" from="recordings_template">
                         <area>891,0,200,60</area>
@@ -901,7 +901,7 @@
                         <align>vcenter,left</align>
                         <cutdown>yes</cutdown>
 <!--                         <template>%TITLE| %%[|CATEGORY|]%% |YEAR%% |STARS%</template> -->
-                        <template>%YEAR| %%STARS| %%[|CATEGORY|]%% |TITLE%</template>
+                        <template>%TITLE%% |YEARSTARS%% ‹|CATEGORY|›%</template>
                     </textarea>
                     <textarea name="callsign" from="recordings_template">
                         <area>891,0,200,60</area>
