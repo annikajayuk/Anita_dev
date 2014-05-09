@@ -1627,7 +1627,7 @@
             <state name="ANITA_BACKDROP_NONE" from="ANITA_BACKDROP-base" />
             
             <!-- ANITA_HUGEICON-base -->
-            <state name="ANITA_HUGEICON-base">
+            <state name="zANITA_HUGEICON-base">
                 <imagetype name="hugeicon_bg">
                     <area>0,60,1920,960</area>
                     <filename>backdrops/anita-hugeicons.png</filename>
