@@ -662,7 +662,7 @@
                     </textarea>
                     
                     <!-- thetvdb wide banner: 758x140 -->
-                    <imagetype name="preview">
+                    <imagetype name="banner">
                         <area>0,0,325,60</area>
                         <preserveaspect>false</preserveaspect>
 <!--                         <alpha>184</alpha> -->
