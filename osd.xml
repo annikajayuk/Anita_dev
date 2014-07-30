@@ -377,8 +377,8 @@
             </textarea>
         
             <shape name="separator">
-                <area>1624,0,2,60</area>
-                <fill color="#ffffff" alpha="64" />
+                <area>1632,6,2,48</area>
+                <fill color="#ffffff" alpha="56" />
             </shape>
         
             <clock name="clock">
