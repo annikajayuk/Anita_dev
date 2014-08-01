@@ -351,81 +351,71 @@
         <fontdef name="medium" face="Lato"><!-- anita-font-primary -->
             <pixelsize>42</pixelsize>
             <color>#FFFFFF</color>
-<!--             <weight>bold</weight> -->
         </fontdef>
         
-        <area>0,0,1920,78</area>
+        <area>0,0,1920,182</area><!-- 7680 x 728 -->
         
-        <shape name="leftbg">
-            <area>0,0,1720,60</area>
-            <fill color="#000000" alpha="160" />
-        </shape>
+        <imagetype name="bg">
+            <area>0,0,1920,182</area>
+            <filename>backdrops/osd_status.png</filename>
+        </imagetype>
         
-        <textarea name="title">
-            <font>medium</font>
-            <area>8,0,1712,60</area>
-            <align>left,vcenter</align>
-        </textarea>
+        <group name="items">
+            <area>48,48,1824,86</area><!-- 7296 x 344 -->
+
+            <textarea name="title">
+                <font>medium</font>
+                <area>8,0,1616,60</area>
+                <align>left,vcenter</align>
+            </textarea>
         
-        <textarea name="description">
-            <font>medium</font>
-            <area>8,0,1712,60</area>
-            <align>right,vcenter</align>
-            <template>%DESCRIPTION% %VALUE%%UNITS%</template>
-        </textarea>
+            <textarea name="description">
+                <font>medium</font>
+                <area>8,0,1616,60</area>
+                <align>right,vcenter</align>
+                <template>%DESCRIPTION% %VALUE%%UNITS%</template>
+            </textarea>
         
-        <shape name="separator">
-            <area>1720,0,2,60</area>
-            <fill color="#000000" alpha="32" />
-        </shape>
-        
-        <shape name="rightbg">
-            <area>1722,0,198,60</area>
-            <fill color="#000000" alpha="192" />
-        </shape>
-        
-        <clock name="clock">
-<!--             <area>1350,0,420,150</area> -->
-            <area>1722,0,198,60</area>
-            <font>medium</font>
-            <template>%TIME%</template>
-            <align>vcenter,hcenter</align>
-        </clock>
-        
-<!-- 
-        <progressbar name="position">
-            <area>15,75,1305,57</area>
-            <layout>horizontal</layout>
-            <style>reveal</style>
-            <imagetype name="background">
-                <area>0,0,100%,100%</area>
-                <filename>osd/progressbar_bg.png</filename>
-            </imagetype>
-            <imagetype name="progressimage">
-                <area>0,0,100%,100%</area>
-                <filename>osd/progressbar_fill.png</filename>
-            </imagetype>
-        </progressbar>
- -->
-        
-        <shape name="separator2">
-            <area>0,60,1920,2</area>
-            <fill color="#000000" alpha="32" />
-        </shape>
-        
-        <progressbar name="position">
-            <area>0,62,1920,16</area>
-            <layout>horizontal</layout>
-            <style>reveal</style>
-            <shape name="background">
-                <area>0,0,100%,100%</area>
-                <fill color="#ffffff" alpha="96" />
+            <shape name="separator">
+                <area>1632,6,2,48</area>
+                <fill color="#ffffff" alpha="56" />
             </shape>
-            <shape name="progressimage">
-                <area>0,0,100%,100%</area>
-                <!-- anita-selectcolour-normal --><fill color="#0096ff" alpha="192" />
-            </shape>
-        </progressbar>
+        
+            <clock name="clock">
+                <area>1626,0,198,60</area>
+                <font>medium</font>
+                <template>%TIME%</template>
+                <align>vcenter,hcenter</align>
+            </clock>
+        
+            <progressbar name="position">
+                <area>8,62,1808,16</area>
+                <layout>horizontal</layout>
+                <style>reveal</style>
+                <shape name="background">
+                    <area>0,0,100%,100%</area>
+                    <fill style="gradient">
+                        <gradient direction="vertical" alpha="255">
+                            <stop position="0" color="#888888" />
+                            <stop position="50" color="#888888" />
+                            <stop position="100" color="#666666" />
+                        </gradient>
+                    </fill>
+                    <alpha>80</alpha>
+                </shape>
+                <shape name="progressimage">
+                    <area>0,0,100%,100%</area>
+                    <fill style="gradient">
+                        <gradient direction="vertical" alpha="255">
+                            <stop position="0" color="#ffdd00" />
+                            <stop position="50" color="#ffdd00" />
+                            <stop position="100" color="#ccb100" />
+                        </gradient>
+                    </fill>
+                    <alpha>255</alpha>
+                </shape>
+            </progressbar>
+        </group>
         
     </window>
 
@@ -500,21 +490,25 @@
 
     <!-- osd_message 720->1080 *1.5: not started -->
     <window name="osd_message">
+        
         <fontdef name="medium" face="Lato"><!-- anita-font-primary -->
-            <pixelsize>28</pixelsize>
-            <color>#EEEEEE</color>
-            <weight>bold</weight>
+            <pixelsize>34</pixelsize>
+            <color>#ffffff</color>
         </fontdef>
-        <area>680,124,550,80</area>
+        
+        <area>657,98,606,136</area>
+        
         <imagetype name="background">
-            <area>0,0,550,80</area>
-            <filename>osd/message.png</filename>
+            <area>0,0,606,136</area>
+            <filename>backdrops/osd_message.png</filename>
         </imagetype>
+        
         <textarea name="message_text">
             <font>medium</font>
-            <area>20,20,510,40</area>
+            <area>38,38,530,60</area>
             <align>hcenter,vcenter</align>
         </textarea>
+        
     </window>
 
     <!-- MythPopupBox 720->1080 *1.5: done -->
