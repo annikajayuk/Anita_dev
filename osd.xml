@@ -491,18 +491,17 @@
     <!-- osd_message 720->1080 *1.5: not started -->
     <window name="osd_message">
         <fontdef name="medium" face="Lato"><!-- anita-font-primary -->
-            <pixelsize>28</pixelsize>
-            <color>#EEEEEE</color>
-            <weight>bold</weight>
+            <pixelsize>34</pixelsize>
+            <color>#ffffff</color>
         </fontdef>
-        <area>680,124,550,80</area>
+        <area>657,98,606,136</area>
         <imagetype name="background">
-            <area>0,0,550,80</area>
-            <filename>osd/message.png</filename>
+            <area>0,0,606,136</area>
+            <filename>backdrops/osd_message.png</filename>
         </imagetype>
         <textarea name="message_text">
             <font>medium</font>
-            <area>20,20,510,40</area>
+            <area>38,38,530,60</area>
             <align>hcenter,vcenter</align>
         </textarea>
     </window>
